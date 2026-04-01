@@ -10,7 +10,8 @@ body{
     font-family:'Satoshi-Black', sans-serif;
     font-size: 2vw;
     font-weight: bold;
-    color: darkgray;
+    background-color: rgb(182, 195, 203);
+    color: white;
 }
 
 header{
@@ -23,42 +24,86 @@ header{
 
 .container {
     display: flex; /* Makes the children (aside and main) flex items */
-    height: calc(100vh - 40px); /* Full viewport height minus header height */
+    width: 20vw;
+}
+
+
+.sidebar-total {
+    margin: 0; 
+    width: 0;
+    flex-direction: column;
+    position: fixed;
+    width: 5vw; /* Set a specific width for the sidebar */
+    overflow-y: auto; /* Adds a scrollbar if content is too long */
 }
 
 .sidebar {
     margin: 0;
-    padding: 0;  
+    opacity: 0;  
+
     flex-direction: column;
     position: fixed;
+    background-color: rgba(137, 170, 223, 0.388);
     width: 20vw; /* Set a specific width for the sidebar */
     overflow-y: auto; /* Adds a scrollbar if content is too long */
 }
 
 .sidebar a{
-    text-align: center;
+    text-align: left;
     display: block;
-    padding: 10px;
+
+    padding: 20px;
+    margin: 15px;
+    width: 10vw;
+
+    border-radius: 10px;
+    row-gap: 10px;
+    font-size: 1.5vw;
     background-color: white;
     text-decoration: none;
-    color: blue;
+    color: rgb(111, 179, 206);
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: lightblue;
+    transition: ease-in 0.3s;
+    padding-left: 40px;
+    background-color: rgb(111, 179, 206);
     color: white;
-    box-shadow: 0px 0px 30px blue;
+    box-shadow: 0px 0px 30px rgb(225, 240, 252);
+}
+
+.sidebar a.active:hover {
+    transition: ease-in 0.3s;
+    padding-left: 40px;
+    background-color: rgb(111, 179, 206);
+    color: white;
+    box-shadow: 0px 0px 30px rgb(225, 240, 252);
 }
 
 .sidebar a.active {
-    background-color: lightblue;
+    background-color: rgb(111, 179, 206);
     color: white;
 }
 
-div.content{
+
+.sidebar.show {
+    width: 20vw;
+    transform: ease-in-out 3    s;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.content{
     margin-left: 20vw;
     padding: 1px 16px;
     height: 1000px;
+}
+
+.content.show{
+    padding: 1px 16px;
+    height: 1000px;
+    margin:0;
 }
 
 /*.sidebar button{
@@ -71,6 +116,13 @@ div.content{
     cursor: pointer;
 }*/
 
-.content{
-    margin-left: 20vw;
+
+.nav-btn{
+    display: block;
+    opacity: 1;
+}
+
+.nav-btn.show{
+    opacity: 1;
+    display: block;
 }

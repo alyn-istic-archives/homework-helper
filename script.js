@@ -2,6 +2,14 @@ const n_session_btn = document.getElementById("new-session");
 const c_session_btn = document.getElementById("close-session");
 const s_session_btn = document.getElementById("submit-session");
 
+const nav_btn = document.getElementById("nav-btn");
+
+showItem(nav_btn, true);
+
+const sidebar = document.querySelector(".sidebar");
+const content = document.querySelector(".content");
+
+
 const form = document.getElementById("session-form");
 const output = document.getElementById("session-output");
 
@@ -9,6 +17,7 @@ const output = document.getElementById("session-output");
 //event listeners for new session, close session, and submit session buttons
 if (n_session_btn){
     n_session_btn.addEventListener("click", function() {
+
         showSessionPopup(true);
     });
 }
@@ -24,7 +33,20 @@ if (s_session_btn){
         uploadSession();
     });
 }
-
+if (nav_btn){
+    nav_btn.addEventListener("click", function() {
+        if (nav_btn!==document.querySelector(".nav-btn.show")){
+            showItem(content, true);
+            showItem(sidebar, false);
+            showItem(nav_btn, true);
+        }
+        else{
+            showItem(content, false);
+            showItem(sidebar, true);
+            showItem(nav_btn, false);
+        }
+    });
+}
 
 
 function showSessionPopup(isVisible) {
@@ -37,6 +59,15 @@ function showSessionPopup(isVisible) {
     } else {
         sessionPopup.classList.remove("show");
         sessionPopupOverlay.classList.remove("show");
+    }
+}
+
+
+function showItem(item, isVisible) {
+    if (isVisible) {
+        item.classList.add("show");
+    } else {
+        item.classList.remove("show");
     }
 }
 

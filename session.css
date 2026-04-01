@@ -1,0 +1,72 @@
+
+.session-textbox{
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgb(189, 189, 189);
+    font-size: 1.2rem;
+}
+
+.session-output{
+    width: 100%;
+
+}
+
+.sh1{
+    font-size: 1.5rem;
+}
+
+label{
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+}
+
+.session-entry-card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.session-container{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    background-color: red;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+.session-popup {
+    display: flex;
+    background-color: white;
+    width: 40vw;
+    aspect-ratio: 5/4;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: auto;
+    position: fixed;
+    border-radius: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    border: 0.15rem solid rgb(189, 189, 189);
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.session-popup.show {
+    transform: translate(-50%, -50%) scale(1.0);
+    opacity: 1;
+    pointer-events: auto;
+}
