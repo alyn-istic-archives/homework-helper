@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel = "stylesheet" href="homepage.css">
+    <link rel = "stylesheet" href="styles.css">
+    <link rel="stylesheet" href="timer.css">
+</head>
+
+<body>
+
+
+        <div class = "sidebar">
+            <div class = logo>
+                <img src="images/logo.png" alt="Homework Helper" class="logo">
+            </div>
+            <a class = "active" href = "index.html"> Hours </a>
+            <a href = "shop.html"> shop </a>
+            <a href = "guy.html"> lil guy </a>  
+        </div>
+
+        <div class = "timercontainer">
+                <div class="time">
+                    <span>
+                        Hr:
+                    </span>
+                    <span class="digit" id="hr">
+                        00
+                    </span>
+                    <span >
+                        Min:
+                    </span>
+                    <span class="digit" id="min">
+                        00
+                    </span>
+                    <span>
+                        Sec:
+                    </span>
+                    <span class="digit" id="sec">
+                        00
+                    </span>
+                    <span class="digit" id="count">
+                    </span>
+                </div>
+                <div class = "time-btns">
+                    <button class="btn" id="start">
+                        Start
+                    </button>
+                    <button class="btn" id="save">
+                        Save
+                    </button>
+                    <button class="btn" id="stop">
+                        Stop
+                    </button>
+                    <button class="btn" id="reset">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+        
+    <container>
+        <div class = "content">
+            <!-- <button id = "clear-sessions"> clear</button> -->
+            <button id = "new-session"> new session </button>
+            <div id = "session-output">output ??</div>
+        </div>
+        
+        <div class = "popup-overlay"></div>
+        <form class = "session-popup" id = "session-form">
+            <sh1> New Session </sh1>
+            <input type="text" id="session-name" class = "session-textbox">
+            <sh1> session time: 00:00 </sh1>
+            <input type="number" id="session-hours" class = "session-textbox">
+            <input type="text" id="session-details" class = "session-textbox">
+
+
+            <button type="submit" id="submit-session"> submit </button>
+            <button type = "button" id="close-session"> Close </button>
+        </form>
+
+    </container>
+    
+    <script src="script.js"></script>
+    <script src="timer.js"></script>
+
+</body>
+</html>

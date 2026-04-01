@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Satoshi'; /* Name the font */
+  src: url("Satoshi-Black.ttf") format("truetype"); 
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap; /* Helps with page load performance */
+}
+
+body{
+    font-family:'Satoshi-Black', sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    color: darkgray;
+}
+
+header{
+    font: 800 24px/32px 'Satoshi', sans-serif;
+    background-color: #f8f8f8;
+    color: red;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex; /* Makes the children (aside and main) flex items */
+    height: calc(100vh - 40px); /* Full viewport height minus header height */
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;  
+    flex-direction: column;
+    position: fixed;
+    width: 20vw; /* Set a specific width for the sidebar */
+    overflow-y: auto; /* Adds a scrollbar if content is too long */
+}
+
+.sidebar a{
+    text-align: center;
+    display: block;
+    padding: 10px;
+    background-color: white;
+    text-decoration: none;
+    color: blue;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: lightblue;
+    color: white;
+    box-shadow: 0px 0px 30px blue;
+}
+
+.sidebar a.active {
+    background-color: lightblue;
+    color: white;
+}
+
+div.content{
+    margin-left: 20vw;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/*.sidebar button{
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+}*/
+
+.content{
+    margin-left: 20vw;
+}
