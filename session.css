@@ -8,12 +8,12 @@
 }
 
 .session-output{
+    display:grid;
+    padding: 10px;
+    grid-template-columns: repeat(2, minmax(10px, 100vw));
+    gap: 2em;
+    line-height: 1em;
     width: 100%;
-
-}
-
-.sh1{
-    font-size: 1.5rem;
 }
 
 label{
@@ -23,23 +23,16 @@ label{
 }
 
 .session-entry-card{
+    padding: 20px;
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 0.5rem;
+    width: auto;
+    margin-top:30px;
+    border-radius:20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.session-container{
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    background-color: red;
-    gap: 1rem;
-    width: 100%;
-}
 
 
 .session-popup {
@@ -69,4 +62,20 @@ label{
     transform: translate(-50%, -50%) scale(1.0);
     opacity: 1;
     pointer-events: auto;
+}
+
+sh1{
+    padding:10px;
+    font-weight: bold;
+    font-size: 3.5vw;
+    line-height: 7.5vh;
+    gap: 0.5rem;
+}
+
+
+sp {
+    font-weight: bold;
+    font-size: 2vw;
+    line-height:2em;
+    color: rgb(111, 179, 206);
 }

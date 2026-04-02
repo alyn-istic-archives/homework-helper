@@ -8,7 +8,7 @@ showItem(nav_btn, true);
 
 const sidebar = document.querySelector(".sidebar");
 const content = document.querySelector(".content");
-
+const timercontainer = document.querySelector(".timercontainer");
 
 const form = document.getElementById("session-form");
 const output = document.getElementById("session-output");
@@ -36,14 +36,30 @@ if (s_session_btn){
 if (nav_btn){
     nav_btn.addEventListener("click", function() {
         if (nav_btn!==document.querySelector(".nav-btn.show")){
-            showItem(content, true);
-            showItem(sidebar, false);
-            showItem(nav_btn, true);
+            if (timercontainer){
+                showItem(timercontainer, true);
+            }
+            if (content){
+                showItem(content, false);
+            }if (sidebar){
+                showItem(sidebar, false);
+            }
+            if (nav_btn){
+                showItem(nav_btn, true);
+            }
         }
         else{
-            showItem(content, false);
-            showItem(sidebar, true);
-            showItem(nav_btn, false);
+            if (timercontainer){
+                showItem(timercontainer, false);
+            }
+            if (content){
+                showItem(content, true);
+            }if (sidebar){
+                showItem(sidebar, true);
+            }
+            if (nav_btn){
+                showItem(nav_btn, false);
+            }
         }
     });
 }
@@ -92,9 +108,9 @@ function displayEntries(data) {
     const entry = document.createElement("div");
     entry.classList.add("session-entry-card");
     entry.innerHTML = `
-        <h3>${data.course}</h3>
-        <p><strong>Hours:</strong> ${data.hours}</p>
-        <p>${data.details}</p>
+        <sh1>${data.course}</sh1>
+        <sp>Hours: ${data.hours}</sp>
+        <sp>Details: ${data.details}</sp>
         <button class="delete-btn">Delete</button>
     `;
     output.appendChild(entry);

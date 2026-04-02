@@ -30,7 +30,6 @@ header{
 
 .sidebar-total {
     margin: 0; 
-    width: 0;
     flex-direction: column;
     position: fixed;
     width: 5vw; /* Set a specific width for the sidebar */
@@ -43,8 +42,7 @@ header{
 
     flex-direction: column;
     position: fixed;
-    background-color: rgba(137, 170, 223, 0.388);
-    width: 20vw; /* Set a specific width for the sidebar */
+    width: 17.5vw; /* Set a specific width for the sidebar */
     overflow-y: auto; /* Adds a scrollbar if content is too long */
 }
 
@@ -53,7 +51,7 @@ header{
     display: block;
 
     padding: 20px;
-    margin: 15px;
+    margin: 10px;
     width: 10vw;
 
     border-radius: 10px;
@@ -95,7 +93,7 @@ header{
 
 
 .content{
-    margin-left: 20vw;
+    margin-left: 2.5vw;
     padding: 1px 16px;
     height: 1000px;
 }
@@ -103,7 +101,7 @@ header{
 .content.show{
     padding: 1px 16px;
     height: 1000px;
-    margin:0;
+    margin-left:15vw;
 }
 
 /*.sidebar button{
