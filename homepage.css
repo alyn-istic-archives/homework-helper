@@ -14,14 +14,6 @@ body{
     color: white;
 }
 
-header{
-    font: 800 24px/32px 'Satoshi', sans-serif;
-    background-color: #f8f8f8;
-    color: red;
-    padding: 20px;
-    text-align: center;
-}
-
 .container {
     display: flex; /* Makes the children (aside and main) flex items */
     width: 20vw;
@@ -50,12 +42,12 @@ header{
     text-align: left;
     display: block;
 
-    padding: 20px;
-    margin: 10px;
+    padding: 1.1vw;
+    margin: .8vw;
     width: 10vw;
 
     border-radius: 10px;
-    row-gap: 10px;
+    row-gap: 1rem;
     font-size: 1.5vw;
     background-color: white;
     text-decoration: none;
@@ -64,7 +56,7 @@ header{
 
 .sidebar a:hover:not(.active) {
     transition: ease-in 0.3s;
-    padding-left: 40px;
+    padding-left: 2vw;
     background-color: rgb(111, 179, 206);
     color: white;
     box-shadow: 0px 0px 30px rgb(225, 240, 252);
@@ -72,7 +64,7 @@ header{
 
 .sidebar a.active:hover {
     transition: ease-in 0.3s;
-    padding-left: 40px;
+    padding-left: 2vw;
     background-color: rgb(111, 179, 206);
     color: white;
     box-shadow: 0px 0px 30px rgb(225, 240, 252);
@@ -95,12 +87,12 @@ header{
 .content{
     margin-left: 2.5vw;
     padding: 1px 16px;
-    height: 1000px;
+    height: 100%;
 }
 
 .content.show{
     padding: 1px 16px;
-    height: 1000px;
+    height: 100%;
     margin-left:15vw;
 }
 

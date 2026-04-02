@@ -9,7 +9,7 @@
 
 .session-output{
     display:grid;
-    padding: 10px;
+    padding: 1vw;
     grid-template-columns: repeat(2, minmax(10px, 100vw));
     gap: 2em;
     line-height: 1em;
@@ -23,12 +23,12 @@ label{
 }
 
 .session-entry-card{
-    padding: 20px;
+    padding: 1.5vw;
     display: flex;
     flex-direction: column;
     background-color: white;
     width: auto;
-    margin-top:30px;
+    margin-top:1.5vw;
     border-radius:20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -65,7 +65,9 @@ label{
 }
 
 sh1{
-    padding:10px;
+    
+    padding:1vw;
+    overflow-wrap: break-word;
     font-weight: bold;
     font-size: 3.5vw;
     line-height: 7.5vh;
@@ -76,6 +78,7 @@ sh1{
 sp {
     font-weight: bold;
     font-size: 2vw;
+    overflow-wrap: break-word;
     line-height:2em;
     color: rgb(111, 179, 206);
 }
