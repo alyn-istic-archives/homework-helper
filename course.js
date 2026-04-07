@@ -7,7 +7,7 @@ function genCourseBtns() {
     const allCourses = new Set();
     sessions.forEach(entry => allCourses.add(entry.course));
 
-    createCourse("All");
+    createCourse("All Courses");
     allCourses.forEach(course => createCourse(course));
 }
 
@@ -19,7 +19,7 @@ function createCourse(coursename) {
     cbtn.classList.add("course-tag");
 
     cbtn.addEventListener("click", () => {
-        if (coursename === "All") {
+        if (coursename === "All Courses") {
             displayEntries(sessions);
         } else {
             const filtered = sessions.filter(entry => entry.course === coursename);

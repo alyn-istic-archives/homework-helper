@@ -41,7 +41,7 @@ if (nav_btn){
     nav_btn.addEventListener("click", function() {
         if (!nav_btn.classList.contains("show")){
             if (timercontainer){
-                showItem(timercontainer, true);
+                showItem(timercontainer, false);
             }
             if (content){
                 showItem(content, false);
@@ -54,7 +54,7 @@ if (nav_btn){
         }
         else{
             if (timercontainer){
-                showItem(timercontainer, false);
+                showItem(timercontainer, true);
             }
             if (content){
                 showItem(content, true);

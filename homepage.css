@@ -5,12 +5,19 @@
   font-style: normal;
   font-display: swap; /* Helps with page load performance */
 }
+:root {
+    --navy: #0a1c38;
+    --blue: #1a6fc4;
+    --accent: #2196f3;
+    --white: #ffffff;
+    --light-bg: #f0f4f8;
+}
 
 body{
     font-family:'Satoshi-Black', sans-serif;
     font-size: 2vw;
     font-weight: bold;
-    background-color: rgb(182, 195, 203);
+    background-color: var(--light-bg);
     color: white;
 }
 
@@ -51,13 +58,13 @@ body{
     font-size: 1.5vw;
     background-color: white;
     text-decoration: none;
-    color: rgb(111, 179, 206);
+    color: var(--blue);
 }
 
 .sidebar a:hover:not(.active) {
     transition: ease-in 0.3s;
     padding-left: 2vw;
-    background-color: rgb(111, 179, 206);
+    background-color: var(--blue);
     color: white;
     box-shadow: 0px 0px 30px rgb(225, 240, 252);
 }
@@ -65,13 +72,13 @@ body{
 .sidebar a.active:hover {
     transition: ease-in 0.3s;
     padding-left: 2vw;
-    background-color: rgb(111, 179, 206);
+    background-color: var(--blue);
     color: white;
     box-shadow: 0px 0px 30px rgb(225, 240, 252);
 }
 
 .sidebar a.active {
-    background-color: rgb(111, 179, 206);
+    background-color: var(--blue);
     color: white;
 }
 
@@ -122,5 +129,8 @@ body{
 }
 
 .course-tag{
-    margin-right: 20px;
+    margin-right: 10px;
+    padding: 1em 1em;
+    border-radius: 10px;
+    font-size: 0.8rem;
 }

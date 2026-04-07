@@ -1,3 +1,10 @@
+:root {
+    --navy: #0a1c38;
+    --blue: #1a6fc4;
+    --accent: #2196f3;
+    --white: #ffffff;
+    --light-bg: #f0f4f8;
+}
 
 .session-textbox{
     width: 80%;
@@ -10,7 +17,7 @@
 .session-output{
     display:grid;
     padding: 1vw;
-    grid-template-columns: repeat(2, minmax(10px, 100vw));
+    grid-template-columns: repeat(3, minmax(10px, 100vw));
     gap: 1em;
     line-height: 1em;
     width: 100%;
@@ -18,28 +25,28 @@
 
 label{
     font-size: 1.2rem;
-    color: black;
+    color: var(--navy);
     text-align: center;
 }
 
 .session-entry-card{
-    z-index: 1000;
+    z-index: 10;
     padding: 1.5vw;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--light-bg);
     width: auto;
     margin-top:1.5vw;
     margin-right: 20px;
     border-radius:20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
 
 
 .session-popup {
     display: flex;
-    background-color: white;
+    background-color: var(--light-bg);
     width: 40vw;
     aspect-ratio: 5/4;
     flex-direction: column;
@@ -55,7 +62,7 @@ label{
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
     opacity: 0;
-    border: 0.15rem solid rgb(189, 189, 189);
+    border: 0.15rem solid var(--light-bg);
     pointer-events: none;
     z-index: 1000;
 }
@@ -66,22 +73,22 @@ label{
     pointer-events: auto;
 }
 
-sh1{
+.sh1{
     
     padding:1vw;
     overflow-wrap: break-word;
     font-weight: bold;
     font-size: 3.5vw;
-    line-height: 7.5vh;
-    color: RED;
+    line-height: 1.5vh;
+    color: var(--navy);
     gap: 0.5rem;
 }
 
 
-sp {
+.sp {
     font-weight: bold;
     font-size: 2vw;
     overflow-wrap: break-word;
-    line-height:2em;
-    color: rgb(111, 179, 206);
+    line-height:1em;
+    color: var(--accent);
 }

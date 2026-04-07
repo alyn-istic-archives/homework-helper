@@ -6,14 +6,22 @@
   font-display: swap; /* Helps with page load performance */
 }
 
+:root {
+    --navy: #0a1c38;
+    --blue: #1a6fc4;
+    --accent: #2196f3;
+    --white: #ffffff;
+    --light-bg: #f0f4f8;
+}
+
 body{
     font-family:'Satoshi-Black', sans-serif;
     font-size: 2vw;
     font-weight: bold;
-    color: darkgray;
+    color: var(--light-bg);
 }
 
-.timercontainer{
+.timercontainer.show{
     position: fixed;
     left: 40%;
     top: 0%;
@@ -22,12 +30,12 @@ body{
     height: 10vh;
     line-height:0;
     width: 32vw;
-    background-color: rgb(56, 199, 242);
+    background-color: var(--accent);
     border-radius: 20px;
     text-align: center;
 }
 
-.timercontainer.show{
+.timercontainer{
     position: fixed;
     left: 35%;
     top: 0%;
@@ -36,7 +44,7 @@ body{
     height: 10vh;
     line-height:0;
     width: 32vw;
-    background-color: rgb(56, 199, 242);
+    background-color: var(--accent);
     border-radius: 20px;
     text-align: center;
 }
@@ -49,7 +57,7 @@ body{
     gap: 1em;
     align-self: center;
     text-align: center;
-    color: white;
+    color: var(--light-bg);
 }
 
 .time-btns{
@@ -61,22 +69,22 @@ body{
 
 button{
     font-family: 'Satoshi-Black', sans-serif;
-    background-color: rgb(66, 155, 193);
+    background-color: var(--accent);
     color: white;
-    padding: 1em;
+    padding: 1em 1.2em;
     border: none;
     border-radius: 10px;
     font-weight: bold; 
 }
 
 button:hover{
-    background-color: rgb(66, 155, 193, 0.8);
+    background-color: var(--blue);
     color: white;
     box-shadow: 0px 0px 20px rgb(66, 155, 193);
 }
 .delete-btn{
     font-family: 'Satoshi-Black', sans-serif;
-    background-color: rgb(66, 155, 193);
+    background-color: var(--accent);
     color: white;
     padding: 1vw;
     border: none;
@@ -85,7 +93,7 @@ button:hover{
     margin: auto;
 }
 .delete-btn:hover{
-    background-color: rgb(66, 155, 193, 0.8);
+    background-color: var(--blue);
     color: white;
     box-shadow: 0px 0px 20px rgb(66, 155, 193);
 }
@@ -97,7 +105,7 @@ button:hover{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.15);
     opacity: 0;
     pointer-events: none;
     z-index: 999;

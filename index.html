@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework</title>
+    <title> Wave: New Motion </title>
     
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel = "stylesheet" href="homepage.css">
@@ -33,20 +33,11 @@
 
         <div class = "timercontainer">
                 <div class="time">
-                    <span>
-                        Hr:
-                    </span>
                     <span class="digit" id="hr">
                         00
                     </span>
-                    <span >
-                        Min:
-                    </span>
                     <span class="digit" id="min">
                         00
-                    </span>
-                    <span>
-                        Sec:
                     </span>
                     <span class="digit" id="sec">
                         00
@@ -74,18 +65,15 @@
             <div id = "coursebtns" class = "course-set"></div>
             <!-- <button id = "clear-sessions"> clear</button> -->
             <button id = "new-session"> new session </button>
-            <button id = "update"> update information </button>
-            chat does ts work svp
             <div class = "session-output"id = "session-output"></div>
         </div>
         
         <div class = "popup-overlay"></div>
         <form class = "session-popup" id = "session-form">
-            <sh1> New Session </sh1>
-            <input type="text" id="session-name" class = "session-textbox">
-            <sh1> session time: 00:00 </sh1>
+            <h3 class = "sh1"> New Session </h3>
+            <input type="text" id="session-name" class = "session-textbox" placeholder="Course">
             <label> hours: </sh1><input type="number" inputmode="numeric" pattern = "[0-9]*" id="session-hours" class = "session-textbox"></label>
-            <input type="text" id="session-details" class = "session-textbox">
+            <input type="text" id="session-details" class = "session-textbox" placeholder=""Details>
 
 
             <button type="submit" id="submit-session"> submit </button>
