@@ -68,7 +68,6 @@ if (nav_btn){
     });
 }
 
-
 function showSessionPopup(isVisible) {
     const sessionPopup = document.querySelector(".session-popup");
     const sessionPopupOverlay = document.querySelector(".popup-overlay");

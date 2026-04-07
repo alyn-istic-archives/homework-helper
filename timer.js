@@ -14,6 +14,7 @@ let count = 0;
 let timer = false;
 
 
+
 function stopWatch() {
     if (!timer) return;
     
@@ -57,23 +58,27 @@ resetBtn.addEventListener('click', function () {
 });
 
 if (saveBtn) {
-    saveBtn.addEventListener('click', function () {
-        showSessionPopup(true);
 
-        if (timer) {
+    saveBtn.addEventListener('click', function () {
+        if (timer){
             elapsed += Date.now() - startTime;
             timer = false;
         }
         // convert elapsed ms to minutes for the hours field
-        const totalSeconds = Math.floor(elapsed / 1000);
-        const mins = Math.floor(totalSeconds / 60);
-        const secs = totalSeconds % 60;
-        document.getElementById("session-hours").value = `${secs}s`;
+        const hr = document.getElementById('hr').textContent;
+        const min = document.getElementById('min').textContent;
+        const sec = document.getElementById('sec').textContent;
 
+    // 3. Combine them into your display field
+        document.getElementById("session-hours").value = `${hr}h ${min}m ${sec}s`;
+    
+        showSessionPopup(true);
+        
         elapsed = 0;
         startTime = null;
         document.getElementById('hr').innerHTML = "00";
         document.getElementById('min').innerHTML = "00";
         document.getElementById('sec').innerHTML = "00";
+
     });
 }

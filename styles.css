@@ -23,28 +23,28 @@ body{
 
 .timercontainer.show{
     position: fixed;
-    left: 40%;
-    top: 0%;
+    left: 45%;
+    top: 20%;
     display: block;
     margin: auto;
     height: 10vh;
     line-height:0;
-    width: 32vw;
-    background-color: var(--accent);
+    width: auto;
+    background-color: var(--blue);
     border-radius: 20px;
     text-align: center;
 }
 
 .timercontainer{
     position: fixed;
-    left: 35%;
-    top: 0%;
+    left: 40%;
+    top: 20%;
     display: block;
     margin: auto;
     height: 10vh;
     line-height:0;
-    width: 32vw;
-    background-color: var(--accent);
+    width: auto;
+    background-color: var(--blue);
     border-radius: 20px;
     text-align: center;
 }
@@ -53,11 +53,12 @@ body{
     display: flex;
     flex-direction: row;
     padding:2vw;
-    margin: 0;
+    margin-left: 20px;
     gap: 1em;
     align-self: center;
     text-align: center;
     color: var(--light-bg);
+    margin-bottom: 10px;
 }
 
 .time-btns{
