@@ -42,7 +42,7 @@ body{
     text-align: left;
     display: block;
 
-    padding: 1.1vw;
+    padding: 1.15vw;
     margin: .8vw;
     width: 10vw;
 
@@ -78,7 +78,7 @@ body{
 
 .sidebar.show {
     width: 20vw;
-    transform: ease-in-out 3    s;
+    transform: ease-in-out 3s;
     opacity: 1;
     pointer-events: auto;
 }
@@ -115,4 +115,12 @@ body{
 .nav-btn.show{
     opacity: 1;
     display: block;
+}
+
+.course-set{
+    align-self: center;
+}
+
+.course-tag{
+    margin-right: 20px;
 }

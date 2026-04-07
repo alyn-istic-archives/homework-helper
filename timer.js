@@ -10,13 +10,6 @@ let second = 0;
 let count = 0;
 let timer = false;
 
-window.addEventListener("DOMContentLoaded", () => {
-    let sessions = JSON.parse(localStorage.getItem("sessions")) || [];
-
-    sessions.forEach(session => {
-        displayEntries(session);
-    });
-});
 
 
 startBtn.addEventListener('click', function () {

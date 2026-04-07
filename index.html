@@ -10,9 +10,15 @@
     <link rel = "stylesheet" href="styles.css">
     <link rel = "stylesheet" href="session.css">
     <link rel="stylesheet" href="timer.css">
+    <link rel="stylesheet" href="wave.css">
 </head>
 
 <body>
+    <div class = "ocean">
+        <div class = "wave"></div>
+        <div class = "wave"></div>
+    </div>
+
         <div class = "sidebar-total">
             <button class = "nav-btn" id = "nav-btn"> ☰ </button>
             <div class = "sidebar">
@@ -65,8 +71,10 @@
         </div>       
     <container>
         <div class = "content">
+            <div id = "coursebtns" class = "course-set"></div>
             <!-- <button id = "clear-sessions"> clear</button> -->
             <button id = "new-session"> new session </button>
+            <button id = "update"> update information </button>
             chat does ts work svp
             <div class = "session-output"id = "session-output"></div>
         </div>
@@ -88,6 +96,7 @@
     
     <script src="script.js"></script>
     <script src="timer.js"></script>
+    <script src = "course.js"></script>
 
 </body>
 </html>

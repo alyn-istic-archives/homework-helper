@@ -1,10 +1,14 @@
 const n_session_btn = document.getElementById("new-session");
 const c_session_btn = document.getElementById("close-session");
 const s_session_btn = document.getElementById("submit-session");
+const u_session_btn = document.getElementById("update");
 
 const nav_btn = document.getElementById("nav-btn");
 
-showItem(nav_btn, true);
+if (nav_btn){
+    showItem(nav_btn, true);
+}
+let sessions = JSON.parse(localStorage.getItem("sessions")) || [];
 
 const sidebar = document.querySelector(".sidebar");
 const content = document.querySelector(".content");
@@ -17,7 +21,6 @@ const output = document.getElementById("session-output");
 //event listeners for new session, close session, and submit session buttons
 if (n_session_btn){
     n_session_btn.addEventListener("click", function() {
-
         showSessionPopup(true);
     });
 }
@@ -33,9 +36,10 @@ if (s_session_btn){
         uploadSession();
     });
 }
+
 if (nav_btn){
     nav_btn.addEventListener("click", function() {
-        if (nav_btn!==document.querySelector(".nav-btn.show")){
+        if (!nav_btn.classList.contains("show")){
             if (timercontainer){
                 showItem(timercontainer, true);
             }
@@ -78,7 +82,6 @@ function showSessionPopup(isVisible) {
     }
 }
 
-
 function showItem(item, isVisible) {
     if (isVisible) {
         item.classList.add("show");
@@ -86,8 +89,8 @@ function showItem(item, isVisible) {
         item.classList.remove("show");
     }
 }
-
 function uploadSession() {
+
 
     const course = document.getElementById("session-name").value.trim();
     const hours = document.getElementById("session-hours").value.trim();
@@ -95,43 +98,71 @@ function uploadSession() {
 
     const entry = {course, hours, details};
 
-    let sessions = JSON.parse(localStorage.getItem("sessions")) || [];
     sessions.push(entry);
 
     localStorage.setItem("sessions", JSON.stringify(sessions));
 
-    displayEntries(entry);
-}
-
-
-function displayEntries(data) {
-    const entry = document.createElement("div");
-    entry.classList.add("session-entry-card");
-    entry.innerHTML = `
-        <sh1>${data.course}</sh1>
-        <sp>Hours: ${data.hours}</sp>
-        <sp>Details: ${data.details}</sp>
-        <button class="delete-btn">Delete</button>
-    `;
-    output.appendChild(entry);
-
-    entry.querySelector(".delete-btn").addEventListener("click", () => {
-        deleteSession(data.details, entry);
-    });
+    displayEntries(sessions);
+    genCourseBtns();
 
     form.reset();
     showSessionPopup(false);
     
 }
 
+
+function displayEntries(entries) {
+    const output = document.getElementById("session-output");
+    if (!output) return;
+    if (output){
+        output.innerHTML = "";
+        entries.forEach(data => {
+            const entry = document.createElement("div");
+            entry.classList.add("session-entry-card");
+
+            const course = document.createElement("h1");
+            course.classList.add("sh1");
+            course.textContent = data.course;
+
+            const hours = document.createElement("p");
+            hours.classList.add("sp");
+            hours.textContent = data.hours;
+
+            const details = document.createElement("p");
+            details.classList.add("sp");
+            details.textContent = data.details;
+
+            const deletebtn = document.createElement("button");
+            deletebtn.textContent = "delete";
+            deletebtn.classList.add("delete-btn");
+
+            entry.appendChild(course);
+            entry.appendChild(details);
+            entry.appendChild(hours);
+            entry.appendChild(deletebtn);
+
+            output.appendChild(entry);
+ 
+            deletebtn.addEventListener("click", () => {
+                deleteSession(data.details, entry);
+            });
+
+        });
+    }
+    
+}
+
 function deleteSession(id, element) {
         // remove from localStorage
-        let sessions = JSON.parse(localStorage.getItem("sessions")) || [];
-
         sessions = sessions.filter(session => session.details !== id);
-
         localStorage.setItem("sessions", JSON.stringify(sessions));
 
+        console.log(sessions);
+        genCourseBtns();
+        console.log(document.getElementById("coursebtns").innerHTML);
+        displayEntries(sessions);
         // remove from UI
         element.remove();
 }
+
+displayEntries(sessions);
