@@ -2,6 +2,7 @@
 
 
 .ocean {
+    cursor: url("images/bcursor1.png"), pointer;
     height: 15%;
     width:100%;
     position: fixed;

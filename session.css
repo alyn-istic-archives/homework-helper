@@ -1,3 +1,5 @@
+
+
 :root {
     --navy: #0a1c38;
     --blue: #1a6fc4;
@@ -15,6 +17,7 @@
 }
 
 .session-output{
+    cursor: url("images/bcursor1.png"), pointer;
     display:grid;
     padding: 1vw;
     grid-template-columns: repeat(3, minmax(10px, 100vw));
@@ -42,9 +45,8 @@ label{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
-
-
 .session-popup {
+    cursor: url("images/bcursor1.png"), pointer;
     display: flex;
     background-color: var(--light-bg);
     width: 40vw;
@@ -57,7 +59,7 @@ label{
     justify-content: space-evenly;
     align-items: center;
     padding: 2rem;
-    gap: 1.5rem;
+    gap: 0rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
@@ -74,18 +76,18 @@ label{
 }
 
 .sh1{
-    
     padding:1vw;
     overflow-wrap: break-word;
     font-weight: bold;
     font-size: 3.5vw;
-    line-height: 1.5vh;
+    line-height: 1.2em;
     color: var(--navy);
-    gap: 0.5rem;
+    margin-bottom: 10px;
 }
 
 
 .sp {
+    margin: 10px;
     font-weight: bold;
     font-size: 2vw;
     overflow-wrap: break-word;

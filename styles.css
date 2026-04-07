@@ -6,6 +6,7 @@
   font-display: swap; /* Helps with page load performance */
 }
 
+
 :root {
     --navy: #0a1c38;
     --blue: #1a6fc4;
@@ -19,12 +20,14 @@ body{
     font-size: 2vw;
     font-weight: bold;
     color: var(--light-bg);
+    cursor: pointer;
 }
 
 .timercontainer.show{
+    cursor: url("images/bcursor1.png"), pointer;
     position: fixed;
     left: 45%;
-    top: 20%;
+    top: 0%;
     display: block;
     margin: auto;
     height: 10vh;
@@ -36,9 +39,10 @@ body{
 }
 
 .timercontainer{
+    cursor: url("images/bcursor1.png"), pointer;
     position: fixed;
     left: 40%;
-    top: 20%;
+    top: 0%;
     display: block;
     margin: auto;
     height: 10vh;
@@ -62,6 +66,7 @@ body{
 }
 
 .time-btns{
+    cursor: url("images/bcursor1.png"), pointer;
     display: block;
     margin: auto;
     align-self: center;
@@ -75,6 +80,7 @@ button{
     padding: 1em 1.2em;
     border: none;
     border-radius: 10px;
+    
     font-weight: bold; 
 }
 
@@ -82,6 +88,7 @@ button:hover{
     background-color: var(--blue);
     color: white;
     box-shadow: 0px 0px 20px rgb(66, 155, 193);
+
 }
 .delete-btn{
     font-family: 'Satoshi-Black', sans-serif;

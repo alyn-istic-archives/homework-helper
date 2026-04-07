@@ -5,6 +5,12 @@
   font-style: normal;
   font-display: swap; /* Helps with page load performance */
 }
+
+html{
+    cursor: url("images/bcursor1.png"), pointer;
+}
+
+
 :root {
     --navy: #0a1c38;
     --blue: #1a6fc4;
@@ -14,20 +20,24 @@
 }
 
 body{
+    
     font-family:'Satoshi-Black', sans-serif;
     font-size: 2vw;
     font-weight: bold;
     background-color: var(--light-bg);
     color: white;
+    cursor: url("images/bcursor1.png"), pointer;
 }
 
 .container {
+    
     display: flex; /* Makes the children (aside and main) flex items */
     width: 20vw;
 }
 
 
 .sidebar-total {
+    cursor: url("images/bcursor1.png"), pointer;
     margin: 0; 
     flex-direction: column;
     position: fixed;
@@ -110,7 +120,6 @@ body{
     color: black;
     background: none;
     border: none;
-    cursor: pointer;
 }*/
 
 
@@ -125,6 +134,7 @@ body{
 }
 
 .course-set{
+    cursor: url("images/bcursor1.png"), pointer;
     align-self: center;
 }
 

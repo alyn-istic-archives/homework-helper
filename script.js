@@ -136,8 +136,8 @@ function displayEntries(entries) {
             deletebtn.classList.add("delete-btn");
 
             entry.appendChild(course);
+            entry.appendChild(hours);   
             entry.appendChild(details);
-            entry.appendChild(hours);
             entry.appendChild(deletebtn);
 
             output.appendChild(entry);
