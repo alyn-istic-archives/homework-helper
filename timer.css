@@ -1,0 +1,45 @@
+
+.timercontainer.show{
+    cursor: url("images/bcursor1.png"), pointer;
+    position: fixed;
+    left: 48%;
+    top: 20%;
+    z-index: 30;
+    display: block;
+    height: 10vh;
+    line-height:0;
+    border-radius: 20px;
+}
+
+.timercontainer{
+    cursor: url("images/bcursor1.png"), pointer;
+    position: fixed;
+    left: 40%;
+    top: 20%;
+    z-index: 30;
+    display: block;
+    height: 10vh;
+    line-height:0;
+    border-radius: 20px;    
+}
+
+.time{
+    align-self: center;
+    width: 10rem;
+    margin-left: 30px;
+
+    padding: 1em;
+    text-align: center;
+    border:none;
+    border-radius: 10px;
+    color: var(--light-bg); 
+    background-color: var(--blue);
+}
+
+.time-btns{
+    cursor: url("images/bcursor1.png"), pointer;
+    display: block;
+    margin: auto;
+    align-self: center;
+    gap: 1em;
+}

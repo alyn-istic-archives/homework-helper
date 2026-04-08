@@ -32,7 +32,6 @@ function createCourse(coursename) {
     courselist.push(coursename);
     courseset.appendChild(cbtn);
     
-    updateDropdown();
 }
 
 
@@ -41,13 +40,13 @@ function updateDropdown(set) {
   // Clear existing options to prevent duplicates
     select.innerHTML = '<option disabled selected>bro an option</option>';
 
-    if (set!=null){
-        for (let i = 0; i<set.length; i++){
+    if (set&&set.length>0){
+        set.forEach(course =>{
             let el = document.createElement("option"); 
-            el.textContent = "hullo"; // Set visible text
-            el.value = "pls work";       // Set value for form submission
+            el.textContent = course; // Set visible text
+            el.value = course;       // Set value for form submission
             select.appendChild(el);
-        };
+        });
     }
 
 

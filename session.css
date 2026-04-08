@@ -2,7 +2,7 @@
 
 :root {
     --navy: #0a1c38;
-    --blue: #1a6fc4;
+    --blue: rgb(26, 111, 196);
     --accent: #2196f3;
     --white: #ffffff;
     --light-bg: #f0f4f8;
@@ -42,7 +42,7 @@ label{
     margin-top:1.5vw;
     margin-right: 20px;
     border-radius:20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 15px rgba(26, 111, 196, 0.527);
 }
 
 .session-popup {

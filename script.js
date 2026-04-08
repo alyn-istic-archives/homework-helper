@@ -13,15 +13,19 @@ let sessions = JSON.parse(localStorage.getItem("sessions")) || [];
 const sidebar = document.querySelector(".sidebar");
 const content = document.querySelector(".content");
 const timercontainer = document.querySelector(".timercontainer");
+const logo = document.getElementById("logo");
+
 
 const form = document.getElementById("session-form");
 const output = document.getElementById("session-output");
+let hours_total = JSON.parse(localStorage.getItem("hours_total")) || 0;
+let hours_display = document.getElementById("hours-logged");
 
 
 //event listeners for new session, close session, and submit session buttons
 if (n_session_btn){
     n_session_btn.addEventListener("click", function() {
-        showSessionPopup(true);
+        uploadSession();
     });
 }
 if (c_session_btn){
@@ -34,6 +38,7 @@ if (s_session_btn){
         event.preventDefault();
         showSessionPopup(false);
         uploadSession();
+        updatehours(sessions);
     });
 }
 
@@ -51,6 +56,10 @@ if (nav_btn){
             if (nav_btn){
                 showItem(nav_btn, true);
             }
+            if (logo){
+                showItem(logo, false);
+            }
+
         }
         else{
             if (timercontainer){
@@ -63,6 +72,9 @@ if (nav_btn){
             }
             if (nav_btn){
                 showItem(nav_btn, false);
+            }
+            if (logo){
+                showItem(logo, true);
             }
         }
     });
@@ -94,21 +106,22 @@ function uploadSession() {
     const course = document.getElementById("session-name").value.trim();
     const hours = document.getElementById("session-hours").value.trim();
     const details = document.getElementById("session-details").value.trim();
+    const id = Date.now();
 
-    const entry = {course, hours, details};
+    const entry = {course, hours, details, id};
 
     sessions.push(entry);
 
     localStorage.setItem("sessions", JSON.stringify(sessions));
 
     displayEntries(sessions);
+
     genCourseBtns();
 
     form.reset();
     showSessionPopup(false);
     
 }
-
 
 function displayEntries(entries) {
     const output = document.getElementById("session-output");
@@ -143,7 +156,7 @@ function displayEntries(entries) {
             output.appendChild(entry);
  
             deletebtn.addEventListener("click", () => {
-                deleteSession(data.details, entry);
+                deleteSession(data.id);
             });
 
         });
@@ -151,17 +164,30 @@ function displayEntries(entries) {
     
 }
 
-function deleteSession(id, element) {
+function updatehours(entries){
+    const hour_display = document.getElementById("hours-logged");
+    let hours_total =0;
+    
+    if (hour_display){
+        entries.forEach(entry =>{
+            hours_total += Number(entry.hours);
+        })
+    }
+    localStorage.setItem("hours_total", JSON.stringify(hours_total));
+    hour_display.innerHTML = hours_total;
+}
+
+function deleteSession(id) {
         // remove from localStorage
-        sessions = sessions.filter(session => session.details !== id);
+
+        sessions = sessions.filter(session => session.id !== id);
         localStorage.setItem("sessions", JSON.stringify(sessions));
 
-        console.log(sessions);
         genCourseBtns();
-        console.log(document.getElementById("coursebtns").innerHTML);
         displayEntries(sessions);
+        updatehours(sessions);
         // remove from UI
-        element.remove();
 }
 
 displayEntries(sessions);
+updatehours(sessions);

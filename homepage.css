@@ -102,7 +102,7 @@ body{
 
 
 .content{
-    margin-left: 2.5vw;
+    margin-left: 3.5vw;
     padding: 1px 16px;
     height: 100%;
 }
@@ -110,7 +110,7 @@ body{
 .content.show{
     padding: 1px 16px;
     height: 100%;
-    margin-left:15vw;
+    margin-left:16vw;
 }
 
 /*.sidebar button{
@@ -134,13 +134,34 @@ body{
 }
 
 .course-set{
+    z-index: 15;
+    position: absolute;
+    right: 0%;
+    margin-left: 2.5vw;
     cursor: url("images/bcursor1.png"), pointer;
-    align-self: center;
+    align-self: right;
+    gap: .5em;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(20px, 150px));
+
 }
 
 .course-tag{
-    margin-right: 10px;
-    padding: 1em 1em;
-    border-radius: 10px;
+    overflow-wrap: break-word;
+    padding: auto;
+    margin: 0;
+    gap: 1em;
+    border-radius: 30px;
     font-size: 0.8rem;
+    border-color: var(--blue);
+    background-color: var(--accent);
+}
+
+.hours-logged{
+    margin-right: 7vw;
+    opacity: 1;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    text-align: right;
 }

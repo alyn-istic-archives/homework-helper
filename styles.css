@@ -15,62 +15,41 @@
     --light-bg: #f0f4f8;
 }
 
+.logo{
+    z-index: 40;
+    position: fixed;
+    left: 38%;
+    top: 0%;
+    margin: 0;
+    z-index: 30;
+    line-height:0;
+    animation: fadeUp 0.5s ease forwards;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.logo.show{
+    z-index: 40;
+    position: fixed;
+    left: 46%;
+    top: 0%;
+    margin: 0;
+    z-index: 30;
+    line-height:0;
+    animation: fadeUp 0.5s ease forwards;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.logo:hover{
+    transform: scale(1.05);
+    cursor: url("images/bcursor1.png"), pointer;
+}
+
 body{
     font-family:'Satoshi-Black', sans-serif;
     font-size: 2vw;
     font-weight: bold;
     color: var(--light-bg);
     cursor: pointer;
-}
-
-.timercontainer.show{
-    cursor: url("images/bcursor1.png"), pointer;
-    position: fixed;
-    left: 45%;
-    top: 0%;
-    display: block;
-    margin: auto;
-    height: 10vh;
-    line-height:0;
-    width: auto;
-    background-color: var(--blue);
-    border-radius: 20px;
-    text-align: center;
-}
-
-.timercontainer{
-    cursor: url("images/bcursor1.png"), pointer;
-    position: fixed;
-    left: 40%;
-    top: 0%;
-    display: block;
-    margin: auto;
-    height: 10vh;
-    line-height:0;
-    width: auto;
-    background-color: var(--blue);
-    border-radius: 20px;
-    text-align: center;
-}
-
-.time{
-    display: flex;
-    flex-direction: row;
-    padding:2vw;
-    margin-left: 20px;
-    gap: 1em;
-    align-self: center;
-    text-align: center;
-    color: var(--light-bg);
-    margin-bottom: 10px;
-}
-
-.time-btns{
-    cursor: url("images/bcursor1.png"), pointer;
-    display: block;
-    margin: auto;
-    align-self: center;
-    gap: 1em;
 }
 
 button{

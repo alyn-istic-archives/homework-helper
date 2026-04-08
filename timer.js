@@ -1,10 +1,10 @@
 let startTime = null;
 let elapsed = 0; // ms accumulated before pauses
 
-let startBtn = document.getElementById('start');
-let saveBtn = document.getElementById('save');
-let stopBtn = document.getElementById('stop');
-let resetBtn = document.getElementById('reset');
+const startBtn = document.getElementById('start');
+const saveBtn = document.getElementById('save');
+const stopBtn = document.getElementById('stop');
+const resetBtn = document.getElementById('reset');
 
 
 let hour = 0;
@@ -30,7 +30,7 @@ function stopWatch() {
     document.getElementById('min').innerHTML = String(minute).padStart(2, '0');
     document.getElementById('sec').innerHTML = String(second).padStart(2, '0');
 
-    setTimeout(stopWatch, 500);
+    setTimeout(stopWatch, 100);
 }
 
 startBtn.addEventListener('click', function () {
@@ -70,7 +70,7 @@ if (saveBtn) {
         const sec = document.getElementById('sec').textContent;
 
     // 3. Combine them into your display field
-        document.getElementById("session-hours").value = `${hr}h ${min}m ${sec}s`;
+        document.getElementById("session-hours").value = `${sec}`;
     
         showSessionPopup(true);
         

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework</title>
+    <title>Wave: New Motion</title>
 <!--     
     <link rel="icon" type="image/png" href="assets/favicon.png"> -->
     <link rel = "stylesheet" href="homepage.css">
@@ -15,27 +15,54 @@
 
 <body>
 
-    <div class="ocean">
-        <div class="wave"></div>
-        <div class="wave"></div>
+<body>
+    <img src="images/logo.png" width="350" height="171" id = "logo" class="logo">
+
+    <div class = "ocean">
+        <div class = "wave"></div>
+        <div class = "wave"></div>
     </div>
         <div class = "sidebar-total">
             <button class = "nav-btn" id = "nav-btn"> ☰ </button>
             <div class = "sidebar">
-                <div class = logo>
-                    <img src="images/logo.png" alt="Homework Helper" class="logo">
-                </div>
+    
+                <img src="images/bluecry.png" alt="Homework Helper">
+                
                 <a href = "index.html"> Hours </a>
                 <a class = "active"> shop </a>
                 <a href = "guy.html"> lil guy </a>  
             </div>
         </div>
-      
+
+    <container>
+
+        
+        
+        <div class = "content">
+            <!-- <select id="dynamicDropdown">
+                <option disabled selected>Select an option</option>
+            </select> -->
+            <button id = "convert"> convert horus</button>
+            <button id = "new_goal"> new goal !!</button>
+             
+            <div class = "shop-output"id = "shop-output"> shop items... </div>
+            <p class = "hours-logged" id = "hours-logged"> </p>  
+        </div>
+        
+        <div class = "popup-overlay"></div>
+        <form class = "shop-popup" id = "shop-form">
+            <h3 class = "sh1"> New Goal/Item </h3>
+            <input type="text" id="item-name" class = "item-textbox" placeholder="Course">
+            <label> hours: <input number ="text" id="session-hours" class = "session-textbox" ></label>
+            <input type="text" id="session-details" class = "session-textbox" placeholder=""Details>
+
+
+            <button type="submit" id="submit-item"> submit </button>
+            <button type = "button" id="close-item"> Close </button>
+        </form>
     
         
-    
-    <script src="script.js"></script>
-    <script src="wave.js"></script>
+    <script src="shop.js"></script>
 
 </body>
 </html>

@@ -13,32 +13,32 @@
     <link rel="stylesheet" href="wave.css">
 </head>
 
-<body>
+
     <div class = "ocean">
         <div class = "wave"></div>
         <div class = "wave"></div>
     </div>
-
+        <button class = "nav-btn" id = "nav-btn"> ☰ </button>
         <div class = "sidebar-total">
-            <button class = "nav-btn" id = "nav-btn"> ☰ </button>
             <div class = "sidebar">
-                <div class = logo>
-                    <img src="images/logo.png" alt="Homework Helper" class="logo">
-                </div>
+                <img src="images/bluecry.png" alt="Homework Helper">
                 <a class = "active"> Hours </a>
                 <a href = "shop.html"> shop </a>
                 <a href = "guy.html"> lil guy </a>  
             </div>
+            
         </div>
-
-        <div class = "timercontainer">
+        <img src="images/logo.png" width="350" height="171" class = "logo" id = "logo">
+        <div class = "timercontainer">  
                 <div class="time">
                     <span class="digit" id="hr">
-                        00
+                        00 
                     </span>
+                    <span> : </span>
                     <span class="digit" id="min">
-                        00
+                        00 
                     </span>
+                    <span> : </span>
                     <span class="digit" id="sec">
                         00
                     </span>
@@ -59,14 +59,15 @@
                         Reset
                     </button>
                 </div>
-        </div>       
+        </div>     
     <container>
-        <div class = "content">
-            <select id="dynamicDropdown">
-                <option disabled selected>Select an option</option>
-            </select>
+
+        <div class = "courses">
             <div id = "coursebtns" class = "course-set"></div> 
-            <button id = "new-session"> new session </button>
+        </div>
+        
+        <div class = "content"> 
+            <p class = "hours-logged" id = "hours-logged"> hello</p>  
             <div class = "session-output"id = "session-output"></div>
         </div>
         
@@ -74,7 +75,7 @@
         <form class = "session-popup" id = "session-form">
             <h3 class = "sh1"> New Session </h3>
             <input type="text" id="session-name" class = "session-textbox" placeholder="Course">
-            <label> hours: </sh1><input type="text" id="session-hours" class = "session-textbox"></label>
+            <label> hours: <input type="text" id="session-hours" class = "session-textbox" value="Example" readonly></label>
             <input type="text" id="session-details" class = "session-textbox" placeholder=""Details>
 
 
