@@ -25,7 +25,7 @@ let hours_display = document.getElementById("hours-logged");
 //event listeners for new session, close session, and submit session buttons
 if (n_session_btn){
     n_session_btn.addEventListener("click", function() {
-        uploadSession();
+        showSessionPopup(true);
     });
 }
 if (c_session_btn){

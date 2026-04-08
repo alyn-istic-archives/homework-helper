@@ -9,8 +9,8 @@
     <link rel = "stylesheet" href="homepage.css">
     <link rel = "stylesheet" href="styles.css">
     <link rel = "stylesheet" href="session.css">
-    <link rel="stylesheet" href="timer.css">
     <link rel="stylesheet" href="wave.css">
+    <link rel="stylesheet" href="shop.css">
 </head>
 
 <body>
@@ -36,33 +36,33 @@
 
     <container>
 
-        
-        
         <div class = "content">
             <!-- <select id="dynamicDropdown">
                 <option disabled selected>Select an option</option>
-            </select> -->
-            <button id = "convert"> convert horus</button>
-            <button id = "new_goal"> new goal !!</button>
+            </select>
+            <button id = "convert"> convert horus</button> -->
+            <button id = "new-item"> new goal !!</button>
              
-            <div class = "shop-output"id = "shop-output"> shop items... </div>
+            <div class = "shop-output" id = "shop-output"> shop items... </div>
             <p class = "hours-logged" id = "hours-logged"> </p>  
         </div>
         
         <div class = "popup-overlay"></div>
-        <form class = "shop-popup" id = "shop-form">
+        <form class = "item-popup" id = "session-form">
             <h3 class = "sh1"> New Goal/Item </h3>
-            <input type="text" id="item-name" class = "item-textbox" placeholder="Course">
-            <label> hours: <input number ="text" id="session-hours" class = "session-textbox" ></label>
-            <input type="text" id="session-details" class = "session-textbox" placeholder=""Details>
+            <input type="text" id="item-name" class = "item-textbox" placeholder="Goal Name">
+            <label> hours: <input type="numbers" id="item-value" class = "session-textbox"></label>
+            <input type="text" id="item-details" class = "item-textbox" placeholder="Details">
 
 
             <button type="submit" id="submit-item"> submit </button>
             <button type = "button" id="close-item"> Close </button>
         </form>
+    </container>
     
-        
     <script src="shop.js"></script>
+    <script src="script.js"></script>
+    
 
 </body>
 </html>
