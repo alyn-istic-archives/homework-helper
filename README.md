@@ -1,9 +1,8 @@
-# homework helper
+# 🌊 wave: new motion 🌊
+**wave: new motion** is a studying website (app maybe) that tracks in real time studying through the usage of a stopwatch for periods of time spent studying, timers for concentrated periods of time, and a gamification in the form of a shop!
 
-**Homework Helper (beta name)**  is a studying website (app maybe) that tracks in real time studying through the usage of a stopwatch for periods of time spent studying, timers for concentrated periods of time, and a gamification in the form of a shop!
 
-
-## Features
+## ♒︎ Features ♒︎
 
 - Able to create new sessions through using buttons with reference screenshots
 - **Time**
@@ -12,7 +11,7 @@
 
 ---
 
-## How to Use
+## 𖦹 How to Use 𖦹
 
 1. Set the stopwatch for an unlimited time session
 2. Press save
@@ -21,5 +20,5 @@
 
 ---
 
-## Credits
+## ﹏𓊝﹏𓂁﹏⊹ ࣪ Credits 🫧
 All Art made by me !!
