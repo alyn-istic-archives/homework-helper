@@ -2,25 +2,27 @@
 .timercontainer.show{
     cursor: url("images/bcursor1.png"), pointer;
     position: fixed;
-    left: 48%;
-    top: 20%;
+    left: 60%;
+    top: 2.5%;
     z-index: 30;
     display: block;
     height: 10vh;
     line-height:0;
     border-radius: 20px;
+    margin-bottom: 10vh;
 }
 
 .timercontainer{
     cursor: url("images/bcursor1.png"), pointer;
     position: fixed;
-    left: 40%;
-    top: 20%;
+    left: 52%;
+    top: 2.5%;
     z-index: 30;
     display: block;
     height: 10vh;
     line-height:0;
-    border-radius: 20px;    
+    border-radius: 20px;
+    margin-bottom: 10vh;    
 }
 
 .time{

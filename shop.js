@@ -9,6 +9,9 @@ const shop_output = document.getElementById("shop-output");
 const shop_form = document.getElementById("item-form");
 const clear = document.getElementById("clear-bought");
 
+const cantbuy = document.getElementById("cantbuy-form");
+const c_cantbuy = document.getElementById("close-cantbuy");
+
 let items = JSON.parse(localStorage.getItem("items")) || [];
 let items_bought = JSON.parse(localStorage.getItem("items_bought")) || [];
 
@@ -36,12 +39,33 @@ if (clear){
     });
 }
 
+if (c_cantbuy){
+    c_cantbuy.addEventListener("click", function() {
+        showCantBuy(false);
+    });
+}
+
 function showItemPopup(isVisible) {
     const itemPopup = document.querySelector(".item-popup");
     const itemPopupOverlay = document.querySelector(".popup-overlay");
 
     if (isVisible) {
         itemPopup.classList.add("show");
+        itemPopupOverlay.classList.add("show");
+    } else {
+        itemPopup.classList.remove("show");
+        itemPopupOverlay.classList.remove("show");
+    }
+}
+
+function showCantBuy(isVisible) {
+    const itemPopup = document.querySelector(".cantbuy-popup");
+    
+    const itemPopupOverlay = document.querySelector(".popup-overlay");
+
+    if (isVisible) {
+        itemPopup.classList.add("show");
+        
         itemPopupOverlay.classList.add("show");
     } else {
         itemPopup.classList.remove("show");
@@ -90,15 +114,24 @@ function displayItems(items) {
             buy.textContent = "buy";
             buy.classList.add("buy-btn");
 
+            const deleteitem = document.createElement("button");
+            deleteitem.textContent = "delete";
+            deleteitem.classList.add("buy-btn");
+
             item.appendChild(name);
             item.appendChild(value);   
             item.appendChild(details);
             item.appendChild(buy);
+            item.appendChild(deleteitem);
 
             shop_output.appendChild(item);
  
             buy.addEventListener("click", () => {
-                buyItem(data.id, data.item_value, data);
+                buyItem(data.id);
+            });
+
+            deleteitem.addEventListener("click", () => {
+                deleteItem(data.id);
             });
 
         });
@@ -114,8 +147,10 @@ function clearBought(){
 
 function buyItem(id) {
         // remove from localStorage
-        const item = items.find(i => i.id === id);
+    const totalhours = JSON.parse(localStorage.getItem("hours_total"))
+    const item = items.find(i => i.id === id);
 
+    if (item.item_value<=totalhours){
 
         if (item){
             let items_bought = JSON.parse(localStorage.getItem("items_bought")) || [];
@@ -129,7 +164,26 @@ function buyItem(id) {
 
         displayItems(items);
         calculatehours();
+    }
+    else{
+        showCantBuy(true);
+    }
         // remove from UI
 }
+
+function deleteItem(id){
+    const item = items.find(i => i.id === id);
+
+
+    if (item){
+
+
+        items = items.filter(session => session.id !== id);
+        localStorage.setItem("items", JSON.stringify(items));
+
+        displayItems(items);
+    }
+}
+
 
 displayItems(items);

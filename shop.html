@@ -43,23 +43,29 @@
             <button id = "convert"> convert horus</button> -->
             <button id = "new-item"> new goal !!</button> 
             <button id = "clear-bought"> bought </button>
-
-            <p class = "hours-logged" id = "hours-logged"> </p>  
-            <div class = "shop-output"> items... </div>
+            <div class = "currency"> hours:
+                <p class = "hours-logged" id = "hours-logged"> </p>  
+            </div>
+            <div class = "shop-output" id = "shop-output"> items.. </div>
         </div>
         
-        <div class = "shop-output" id = "shop-output"> </div>
 
         <div class = "popup-overlay"></div>
-        <form class = "item-popup" id = "session-form">
+        <form class = "item-popup" id = "shop-form">
             <h3 class = "sh1"> New Goal/Item </h3>
-            <input type="text" id="item-name" class = "item-textbox" placeholder="Goal Name">
-            <label> hours: <input type="numbers" id="item-value" class = "session-textbox"></label>
-            <input type="text" id="item-details" class = "item-textbox" placeholder="Details">
+            <input type="text" id="item-name" class = "session-coursebox" placeholder="Goal Name">
+            <label> hours: <input type="numbers" id="item-value" class = "session-numbox"></label>
+            <input type="text" id="item-details" class = "session-textbox" placeholder="Details">
 
 
             <button type="submit" id="submit-item"> submit </button>
             <button type = "button" id="close-item"> Close </button>
+        </form>
+
+        
+        <form class = "cantbuy-popup" id = "cantbuy-form">
+            <h1> sorry! you don't have enough hours for this!</h1>
+            <button type = "button" id="close-cantbuy"> Close </button>
         </form>
     </container>
     

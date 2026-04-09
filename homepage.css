@@ -156,16 +156,6 @@ body{
     margin: 0;
     gap: 1em;
     border-radius: 30px;
-    font-size: 0.8rem;
     border-color: var(--blue);
     background-color: var(--accent);
-}
-
-.hours-logged{
-    margin-right: 7vw;
-    opacity: 1;
-    border-radius: 10px;
-    color: black;
-    background-color: white;
-    text-align: right;
 }

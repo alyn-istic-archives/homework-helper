@@ -145,7 +145,7 @@ function displayEntries(entries) {
             details.textContent = data.details;
 
             const deletebtn = document.createElement("button");
-            deletebtn.textContent = "delete";
+            deletebtn.textContent = "♒︎ Delete";
             deletebtn.classList.add("delete-btn");
 
             entry.appendChild(course);

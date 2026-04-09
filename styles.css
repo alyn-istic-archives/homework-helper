@@ -18,8 +18,8 @@
 .logo{
     z-index: 40;
     position: fixed;
-    left: 38%;
-    top: 0%;
+    left: 28%;
+    top: -2.5%;
     margin: 0;
     z-index: 30;
     line-height:0;
@@ -31,8 +31,8 @@
 .logo.show{
     z-index: 40;
     position: fixed;
-    left: 46%;
-    top: 0%;
+    left: 36%;
+    top: -2.5%;
     margin: 0;
     z-index: 30;
     line-height:0;
@@ -57,8 +57,14 @@ button{
     font-family: 'Satoshi-Black', sans-serif;
     background-color: var(--accent);
     color: white;
-    padding: 1em 1.2em;
+    align-self: center;
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+
     border: none;
+    font-size: 20px;
     border-radius: 10px;
     
     font-weight: bold; 
@@ -74,7 +80,7 @@ button:hover{
     font-family: 'Satoshi-Black', sans-serif;
     background-color: var(--accent);
     color: white;
-    padding: 1vw;
+    padding: 10px;
     border: none;
     border-radius: 10px;
     font-weight: bold;
@@ -102,4 +108,23 @@ button:hover{
 .popup-overlay.show {
     opacity: 1;
     pointer-events: auto;
+}
+
+.hours-logged{
+    padding: 0;
+    margin: 0;
+    width: auto;
+    border-radius: 10px;
+    color: var(--accent);
+    background-color: white;
+    text-align: left;
+}
+
+.currency {
+    direction: flex;
+    background-color: var(--accent);
+    color: var(--light-bg);
+    width: 10vw;
+    border-radius: 15px;
+    padding: 10px;
 }

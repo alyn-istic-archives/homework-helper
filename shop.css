@@ -1,3 +1,12 @@
+:root {
+    --navy: #0a1c38;
+    --blue: #1a6fc4;
+    --accent: rgb(33, 150, 243);
+    --white: #ffffff;
+    --light-bg: #f0f4f8;
+}
+
+
 .item-popup {
     cursor: url("images/bcursor1.png"), pointer;
     display: flex;
@@ -7,17 +16,16 @@
     flex-direction: column;
     box-sizing: border-box;
     overflow: auto;
+
     position: fixed;
     border-radius: 1rem;
-    justify-content: space-evenly;
-    
-    align-items: center;
     padding: 2rem;
     gap: 0rem;
+
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
 
+    transform: translate(-50%, -50%) scale(0.8);
     opacity: 0;
     border: 0.15rem solid var(--light-bg);
     pointer-events: none;
@@ -31,13 +39,10 @@
     z-index: 1000;
 }
 
-.item-textbox{
-    width: 80%;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: 0.1rem solid rgb(189, 189, 189);
-    font-size: 1.2rem;
+h1 {
+    color: var(--navy);
 }
+
 .popup-overlay {
     display: block;
     width: 100%;
@@ -69,6 +74,19 @@
     box-shadow: 0px 0px 15px rgba(26, 111, 196, 0.527);
 }
 
+
+.content{
+    margin-left: 3.5vw;
+    padding: 1px 16px;
+    height: 100%;
+}
+
+.content.show{
+    padding: 1px 16px;
+    height: 100%;
+    margin-left:16vw;
+}
+
 .shop-output{
     cursor: url("images/bcursor1.png"), pointer;
     display:grid;
@@ -79,3 +97,38 @@
     width: 100%;
     color:black;
 }
+
+.cantbuy-popup {
+    cursor: url("images/bcursor1.png"), pointer;
+    display: flex;
+    background-color: var(--light-bg);
+    width: 40vw;
+    aspect-ratio: 5/4;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: auto;
+
+    position: fixed;
+    border-radius: 1rem;
+    padding: 2rem;
+    gap: 0rem;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    border: 0.15rem solid var(--light-bg);
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.cantbuy-popup.show {
+    transform: translate(-50%, -50%) scale(1.0);
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1000;
+    border-radius: 10px;
+    border-color:rgba(47, 106, 232, 0.368);
+}
+

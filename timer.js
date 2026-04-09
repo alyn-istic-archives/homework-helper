@@ -92,7 +92,7 @@ if (saveBtn) {
 
 document.addEventListener("keydown", function(event) {
       // event.key gives the key pressed
-    if (event.key === 'Enter'|| !isRunning){
+    if (event.key === 'Enter'){
         event.preventDefault();
     }
 });
