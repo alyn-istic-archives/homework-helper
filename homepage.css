@@ -14,7 +14,7 @@ html{
 :root {
     --navy: #0a1c38;
     --blue: #1a6fc4;
-    --accent: #2196f3;
+    --accent: rgb(33, 150, 243);
     --white: #ffffff;
     --light-bg: #f0f4f8;
 }
@@ -78,7 +78,7 @@ body{
     padding-left: 2vw;
     background-color: var(--blue);
     color: white;
-    box-shadow: 0px 0px 30px rgb(225, 240, 252);
+    box-shadow: 0px 0px 15px rgb(33, 150, 243);;
 }
 
 .sidebar a.active:hover {
@@ -86,7 +86,7 @@ body{
     padding-left: 2vw;
     background-color: var(--blue);
     color: white;
-    box-shadow: 0px 0px 30px rgb(225, 240, 252);
+    box-shadow: 0px 0px 15px rgb(33, 150, 243);;
 }
 
 .sidebar a.active {

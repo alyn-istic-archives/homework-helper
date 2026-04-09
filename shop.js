@@ -109,6 +109,7 @@ function displayItems(items) {
 function clearBought(){
     items_bought = [];
     localStorage.setItem("items_bought", JSON.stringify(items_bought));
+    calculatehours();
 }
 
 function buyItem(id) {
@@ -128,7 +129,6 @@ function buyItem(id) {
 
         displayItems(items);
         calculatehours();
-        // updatehours(sessions);
         // remove from UI
 }
 
