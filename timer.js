@@ -12,12 +12,13 @@ let minute = 0;
 let second = 0;
 let count = 0;
 let timer = false;
+let isRunning = false;
 
 
 
 function stopWatch() {
     if (!timer) return;
-    
+    isRunning = true;
     const now = Date.now();
     const total = elapsed + (now - startTime); // total ms
 
@@ -43,6 +44,7 @@ startBtn.addEventListener('click', function () {
 
 stopBtn.addEventListener('click', function () {
     if (timer) {
+        isRunning =true;
         elapsed += Date.now() - startTime; // save accumulated time
         timer = false;
     }
@@ -50,6 +52,7 @@ stopBtn.addEventListener('click', function () {
 
 resetBtn.addEventListener('click', function () {
     timer = false;
+    isRunning = false;
     elapsed = 0;
     startTime = null;
     document.getElementById('hr').innerHTML = "00";
@@ -63,22 +66,33 @@ if (saveBtn) {
         if (timer){
             elapsed += Date.now() - startTime;
             timer = false;
-        }
+        if (isRunning){
         // convert elapsed ms to minutes for the hours field
-        const hr = document.getElementById('hr').textContent;
-        const min = document.getElementById('min').textContent;
-        const sec = document.getElementById('sec').textContent;
+            const hr = document.getElementById('hr').textContent;
+            const min = document.getElementById('min').textContent;
+            const sec = document.getElementById('sec').textContent;
 
-    // 3. Combine them into your display field
-        document.getElementById("session-hours").value = `${sec}`;
-    
-        showSessionPopup(true);
+        // 3. Combine them into your display field
+            document.getElementById("session-hours").value = `${sec}`;
         
-        elapsed = 0;
-        startTime = null;
-        document.getElementById('hr').innerHTML = "00";
-        document.getElementById('min').innerHTML = "00";
-        document.getElementById('sec').innerHTML = "00";
-
+            showSessionPopup(true);
+            
+            elapsed = 0;
+            startTime = null;
+            document.getElementById('hr').innerHTML = "00";
+            document.getElementById('min').innerHTML = "00";
+            document.getElementById('sec').innerHTML = "00";
+            }
+        }
     });
+
+    isRunning = false;
 }
+
+
+document.addEventListener("keydown", function(event) {
+      // event.key gives the key pressed
+    if (event.key === 'Enter'|| !isRunning){
+        event.preventDefault();
+    }
+});

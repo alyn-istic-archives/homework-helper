@@ -8,9 +8,32 @@
     --light-bg: #f0f4f8;
 }
 
+.session-coursebox{
+    width: auto;
+    padding: 0.5em;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgb(189, 189, 189);
+    font-size: 1.2rem;
+    overflow-wrap: break-word;
+
+}
 
 .session-textbox{
-    width: 80%;
+    width: auto;   
+    padding-bottom: 20vh;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-wrap: break-word;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgb(189, 189, 189);
+    font-size: 1.2rem;
+
+}
+
+.session-numbox{
+    width: auto;
+    overflow-wrap: break-word;
     padding: 0.5rem;
     border-radius: 0.5rem;
     border: 0.1rem solid rgb(189, 189, 189);
@@ -29,8 +52,12 @@
 
 label{
     font-size: 1.2rem;
+    line-height: 1em;
+    gap: 1em;
     color: var(--navy);
-    text-align: center;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .session-entry-card{
@@ -57,8 +84,6 @@ label{
     overflow: auto;
     position: fixed;
     border-radius: 1rem;
-    justify-content: space-evenly;
-    align-items: center;
     padding: 2rem;
     gap: 0rem;
     top: 50%;
@@ -77,11 +102,10 @@ label{
 }
 
 .sh1{
-    padding:1vw;
+    margin-top: 10px;
     overflow-wrap: break-word;
     font-weight: bold;
-    font-size: 3.5vw;
-    line-height: 1.2em;
+    font-size: 3vw;
     color: var(--navy);
     margin-bottom: 10px;
 }
@@ -92,6 +116,6 @@ label{
     font-weight: bold;
     font-size: 2vw;
     overflow-wrap: break-word;
-    line-height:1em;
+
     color: var(--accent);
 }

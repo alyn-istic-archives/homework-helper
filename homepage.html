@@ -73,11 +73,12 @@
         
         <div class = "popup-overlay"></div>
         <form class = "session-popup" id = "session-form">
-            <h3 class = "sh1"> New Session </h3>
-            <input type="text" id="session-name" class = "session-textbox" placeholder="Course">
-            <label> hours: <input type="text" id="session-hours" class = "session-textbox" value="Example" readonly></label>
-            <input type="text" id="session-details" class = "session-textbox" placeholder=""Details>
-
+            <h3 class = "sh1"> New Assignment </h3>
+            <label> Course*</label>
+            <input type="text" id="session-name" class = "session-coursebox" placeholder="Course">
+            <label> Hours:*</label>
+            <input type="text" id="session-hours" class = "session-numbox" value="Example" readonly>
+            <label> Details:</label> <textarea id="session-details" class = "session-textbox" placeholder="Optional notes on assignment"></textarea>
 
             <button type="submit" id="submit-session"> submit </button>
             <button type = "button" id="close-session"> Close </button>

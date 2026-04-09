@@ -215,12 +215,6 @@ function deleteSession(id) {
 
 
 
-document.addEventListener("keydown", function(event) {
-      // event.key gives the key pressed
-    if (event.key === 'Enter'){
-        event.preventDefault();
-    }
-});
 
 
 
