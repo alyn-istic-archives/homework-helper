@@ -74,18 +74,6 @@ function showCantBuy(isVisible) {
     }
 }
 
-function showDelete(isVisible) {
-    const itemPopup = document.querySelector(".delete-popup");
-    const itemPopupOverlay = document.querySelector(".popup-overlay");
-
-    if (isVisible) {   
-        itemPopup.classList.add("show");
-        itemPopupOverlay.classList.add("show");
-    } else {
-        itemPopup.classList.remove("show");
-        itemPopupOverlay.classList.remove("show");
-    }
-}
 function uploadItem() {
     const item_name = document.getElementById("item-name").value.trim();
     const item_value = document.getElementById("item-value").value.trim();

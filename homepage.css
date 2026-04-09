@@ -152,10 +152,10 @@ body{
 .course-tag{
     cursor: url("images/bcursor1.png"), auto;
     overflow-wrap: break-word;
-    padding: auto;
-    margin: 0;
-    gap: 1em;
-    border-radius: 30px;
+    padding: 10px;
+    margin: 2px;
+    gap: 0.5em;
+    border-radius: 20px;
     border-color: var(--blue);
     background-color: var(--accent);
 }

@@ -156,7 +156,16 @@ function displayEntries(entries) {
             output.appendChild(entry);
  
             deletebtn.addEventListener("click", () => {
-                deleteSession(data.id);
+                showDelete(true);
+                const y_delete = document.getElementById("yes-delete");
+                const n_delete = document.getElementById("no-delete");
+                y_delete.addEventListener("click", function(){
+                    deleteSession(data.id);
+                    showDelete(false);
+                })
+                n_delete.addEventListener("click", function(){
+                    showDelete(false);
+                })
             });
 
         });
@@ -212,9 +221,18 @@ function deleteSession(id) {
         calculatehours();
         // remove from UI
 }
+function showDelete(isVisible) {
+    const itemPopup = document.querySelector(".delete-popup");
+    const itemPopupOverlay = document.querySelector(".popup-overlay");
 
-
-
+    if (isVisible) {   
+        itemPopup.classList.add("show");
+        itemPopupOverlay.classList.add("show");
+    } else {
+        itemPopup.classList.remove("show");
+        itemPopupOverlay.classList.remove("show");
+    }
+}
 
 
 
