@@ -12,6 +12,8 @@ const clear = document.getElementById("clear-bought");
 const cantbuy = document.getElementById("cantbuy-form");
 const c_cantbuy = document.getElementById("close-cantbuy");
 
+const delete_form = document.getElementById("delete-form");
+
 let items = JSON.parse(localStorage.getItem("items")) || [];
 let items_bought = JSON.parse(localStorage.getItem("items_bought")) || [];
 
@@ -60,12 +62,24 @@ function showItemPopup(isVisible) {
 
 function showCantBuy(isVisible) {
     const itemPopup = document.querySelector(".cantbuy-popup");
-    
     const itemPopupOverlay = document.querySelector(".popup-overlay");
 
     if (isVisible) {
         itemPopup.classList.add("show");
         
+        itemPopupOverlay.classList.add("show");
+    } else {
+        itemPopup.classList.remove("show");
+        itemPopupOverlay.classList.remove("show");
+    }
+}
+
+function showDelete(isVisible) {
+    const itemPopup = document.querySelector(".delete-popup");
+    const itemPopupOverlay = document.querySelector(".popup-overlay");
+
+    if (isVisible) {   
+        itemPopup.classList.add("show");
         itemPopupOverlay.classList.add("show");
     } else {
         itemPopup.classList.remove("show");
@@ -131,12 +145,20 @@ function displayItems(items) {
             });
 
             deleteitem.addEventListener("click", () => {
-                deleteItem(data.id);
+                showDelete(true);
+                const y_delete = document.getElementById("yes-delete");
+                const n_delete = document.getElementById("no-delete");
+                y_delete.addEventListener("click", function(){
+                    deleteItem(data.id);
+                    showDelete(false);
+                })
+                n_delete.addEventListener("click", function(){
+                    showDelete(false);
+                })
             });
 
         });
     }
-    
 }
 
 function clearBought(){
@@ -144,6 +166,7 @@ function clearBought(){
     localStorage.setItem("items_bought", JSON.stringify(items_bought));
     calculatehours();
 }
+
 
 function buyItem(id) {
         // remove from localStorage
@@ -174,10 +197,7 @@ function buyItem(id) {
 function deleteItem(id){
     const item = items.find(i => i.id === id);
 
-
     if (item){
-
-
         items = items.filter(session => session.id !== id);
         localStorage.setItem("items", JSON.stringify(items));
 
