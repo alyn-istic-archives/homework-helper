@@ -46,6 +46,7 @@ body{
 }
 
 .sidebar {
+    cursor: url("images/bcursor1.png"), auto;
     margin: 0;
     opacity: 0;  
 
@@ -56,6 +57,7 @@ body{
 }
 
 .sidebar a{
+    cursor: url("images/bcursor1.png"), auto;
     text-align: left;
     display: block;
 
@@ -134,6 +136,7 @@ body{
 }
 
 .course-set{
+    cursor: url("images/bcursor1.png"), auto;
     z-index: 15;
     position: absolute;
     right: 0%;
@@ -147,6 +150,7 @@ body{
 }
 
 .course-tag{
+    cursor: url("images/bcursor1.png"), auto;
     overflow-wrap: break-word;
     padding: auto;
     margin: 0;

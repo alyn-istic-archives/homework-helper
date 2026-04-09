@@ -38,7 +38,7 @@ if (s_session_btn){
         event.preventDefault();
         showSessionPopup(false);
         uploadSession();
-        updatehours(sessions);
+        calculatehours();
     });
 }
 
@@ -164,17 +164,41 @@ function displayEntries(entries) {
     
 }
 
-function updatehours(entries){
+function addhours(entries){
     const hour_display = document.getElementById("hours-logged");
-    let hours_total =0;
+    let total =0;
     
     if (hour_display){
         entries.forEach(entry =>{
-            hours_total += Number(entry.hours);
+            total += Number(entry.hours);
         })
     }
+    return Number(total);
+}
+
+function subtracthours(bought){
+    const hour_display = document.getElementById("hours-logged");
+    let total=0;
+    
+    if (hour_display){
+        bought.forEach(item =>{
+            total += Number(item.item_value);
+        })
+    }
+    return Number(total);
+}
+
+function calculatehours(){
+    const hour_display = document.getElementById("hours-logged");
+    let items_bought = JSON.parse(localStorage.getItem("items_bought")) || [];
+
+    let added = addhours(sessions);
+    let subtracted = subtracthours(items_bought);
+
+    hours_total = added-subtracted;
+    hour_display.innerHTML = Number(hours_total);
+
     localStorage.setItem("hours_total", JSON.stringify(hours_total));
-    hour_display.innerHTML = hours_total;
 }
 
 function deleteSession(id) {
@@ -185,9 +209,20 @@ function deleteSession(id) {
 
         genCourseBtns();
         displayEntries(sessions);
-        updatehours(sessions);
+        calculatehours();
         // remove from UI
 }
 
+
+
+document.addEventListener("keydown", function(event) {
+      // event.key gives the key pressed
+    if (event.key === 'Enter'){
+        event.preventDefault();
+    }
+});
+
+
+
 displayEntries(sessions);
-updatehours(sessions);
+calculatehours();

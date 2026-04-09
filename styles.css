@@ -53,6 +53,7 @@ body{
 }
 
 button{
+    cursor: url("images/bcursor1.png"), auto;
     font-family: 'Satoshi-Black', sans-serif;
     background-color: var(--accent);
     color: white;

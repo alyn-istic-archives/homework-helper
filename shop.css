@@ -71,11 +71,11 @@
 
 .shop-output{
     cursor: url("images/bcursor1.png"), pointer;
-    /* display:grid;
+    display:grid;
     padding: 1vw;
     grid-template-columns: repeat(3, minmax(10px, 100vw));
     gap: 1em;
-    line-height: 1em; */
+    line-height: 1em;
     width: 100%;
     color:black;
 }

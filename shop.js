@@ -7,8 +7,10 @@ const s_goal = document.getElementById("submit-item");
 const shop_output = document.getElementById("shop-output");
 
 const shop_form = document.getElementById("item-form");
+const clear = document.getElementById("clear-bought");
 
 let items = JSON.parse(localStorage.getItem("items")) || [];
+let items_bought = JSON.parse(localStorage.getItem("items_bought")) || [];
 
 
 if (n_goal){
@@ -27,6 +29,13 @@ if (s_goal){
         uploadItem();
     });
 }
+
+if (clear){
+    clear.addEventListener("click", function() {
+        clearBought();
+    });
+}
+
 function showItemPopup(isVisible) {
     const itemPopup = document.querySelector(".item-popup");
     const itemPopupOverlay = document.querySelector(".popup-overlay");
@@ -48,7 +57,6 @@ function uploadItem() {
     const entry = {item_name, item_value, details, id};
 
     items.push(entry);
-
     localStorage.setItem("items", JSON.stringify(items));
 
     displayItems(items);
@@ -90,7 +98,7 @@ function displayItems(items) {
             shop_output.appendChild(item);
  
             buy.addEventListener("click", () => {
-                buyItem(data.id, data.value, data);
+                buyItem(data.id, data.item_value, data);
             });
 
         });
@@ -98,17 +106,30 @@ function displayItems(items) {
     
 }
 
+function clearBought(){
+    items_bought = [];
+    localStorage.setItem("items_bought", JSON.stringify(items_bought));
+}
 
-function buyItem(id, value, element) {
+function buyItem(id) {
         // remove from localStorage
+        const item = items.find(i => i.id === id);
 
-        hours_display-=value;
+
+        if (item){
+            let items_bought = JSON.parse(localStorage.getItem("items_bought")) || [];
+            items_bought.push(item);
+            localStorage.setItem("items_bought", JSON.stringify(items_bought));
+        }
+
+
         items = items.filter(session => session.id !== id);
         localStorage.setItem("items", JSON.stringify(items));
 
         displayItems(items);
+        calculatehours();
         // updatehours(sessions);
         // remove from UI
-        element.remove;
 }
+
 displayItems(items);
