@@ -44,3 +44,50 @@
         transform: translate3d(0,20px,0);
     }
 }
+
+/* Animated Wave Background Style  */
+
+
+.home-ocean {
+    cursor: url("images/bcursor1.png"), pointer;
+    height: 30px;
+    width:100%;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background-color: rgb(16, 60, 96);
+}
+
+.home-wave {
+    background: url("images/wave.png") repeat-x;
+    position: absolute;
+    top: -350px;
+    width: 6400px;
+    height: 350px;
+    animation: home-wave 14s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, home-swell 7s;
+    transform: translate3d(0, 0, 0);
+}
+
+.home-wave:nth-of-type(2) {
+    top: -350px;
+    animation: home-wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, home-swell 7.5s ease -1.25s infinite;
+    opacity: 1;
+}
+
+@keyframes home-wave {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: -1920px;
+    }
+}
+
+@keyframes home-swell {
+    0%, 100% {
+        transform: translate3d(0,-30px,0);
+    }
+    50% {
+        transform: translate3d(0,30px,0);
+    }
+}

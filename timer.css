@@ -42,6 +42,15 @@
     cursor: url("images/bcursor1.png"), pointer;
     display: block;
     margin: auto;
+    border-radius: 60px;
     align-self: center;
-    gap: 1em;
+    gap: .5em;
+}
+
+.tbtn{
+    /* padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px; */
+    border-radius: 20px;
 }
