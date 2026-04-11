@@ -73,7 +73,7 @@
     position: absolute;
     top: -350px;
     width: 6400px;
-    height: 350px;
+    height: 700px;
     z-index: -10;
     animation: home-wave 14s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, home-swell 7s;
     transform: translate3d(0, 0, 0);

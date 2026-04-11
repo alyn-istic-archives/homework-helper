@@ -6,6 +6,21 @@
     --light-bg: #f0f4f8;
 }
 
+.shop-logo{
+    z-index: 40;
+    position: fixed;
+    left: 38%;
+    top: 0%;
+    margin: 0;
+    line-height:0;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shop-logo:hover{
+    transform: scale(1.05);
+    cursor: url("images/bcursor1.png"), default;
+}
+
 
 .item-popup {
     cursor: url("images/bcursor1.png"), pointer;

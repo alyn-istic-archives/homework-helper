@@ -35,11 +35,13 @@ nav{
     align-items:center;
     justify-content:space-between;
     padding:0 2.5rem;
+    margin-left: 0;
+    margin-right: 0;
 
     margin-bottom: 0;
     height:150px;
-    /* light-bg */
-    background:rgba(240,244,248, 0.15);
+    /* --navy */
+    background:rgb(33, 150, 243, 0.15);
     backdrop-filter:blur(16px);
     border-bottom:1.5px solid rgba(41,171,226,0.15);
 }
@@ -60,6 +62,7 @@ nav{
 
  
 .nav-links{
+    pointer-events: none;
     display:flex;
     gap:2rem;
     list-style:none;
@@ -68,8 +71,8 @@ nav{
 .nav-links a{
     color:var(--navy);
     text-decoration:none;
-    font-size:14px;
-    font-weight:700;
+    font-size:.75em ;
+    font-weight:bold;
     transition:color 0.2s;
 }
 .nav-links a:hover{
@@ -93,7 +96,8 @@ nav{
     padding:9px 20px;
     border-radius:999px;
 
-    font-size:14px;font-weight:800;
+    font-size:.75em;
+    font-weight:bold;
     text-decoration:none;
     border:none;
     transition:all 0.2s;
@@ -147,13 +151,15 @@ nav{
     border-radius:999px;
     background:white;
     border:2px solid rgba(41,171,226,0.25);
-    font-size:12.5px;font-weight:800;color:var(--blue);
+    font-size:12.5px;
+    font-weight:bold;
+    color:var(--blue);
     margin-bottom:2rem;
     box-shadow:0 2px 12px rgb(10, 28, 56, 0.35);;
     animation:fadeUp 0.5s ease forwards;
 }
  
-.notif-wave{
+.wave-word{
     animation:bob 2s ease-in-out infinite;
     display:inline-block;
 }
@@ -211,64 +217,12 @@ h1 .wave-word::after{
     border-radius:999px;}
  
 .blurb-note{
-    font-size:12.5px;color:var(--navy);font-weight:700;opacity:0.6;
+    font-size:12.5px;color:var(--navy);
+    font-weight:bold;
+    opacity:0.6;
     animation:fadeUp 0.5s 0.4s ease both;
     margin-bottom:3rem;
 }
- 
-/* ── HERO VISUAL (fake app UI) ── */
-.hero-ui{
-  position:relative;
-  width:100%;max-width:700px;
-  background:white;
-  border-radius:24px 24px 0 0;
-  border:2px solid rgba(41,171,226,0.18);
-  box-shadow:0 -4px 60px rgba(41,171,226,0.2), 0 30px 80px rgba(0,0,0,0.08);
-  overflow:hidden;
-  animation:fadeUp 0.6s 0.5s ease both;
-}
- 
-.ui-bar{
-  background:var(--light-bg);
-  border-bottom:1.5px solid rgba(41,171,226,0.12);
-  padding:12px 18px;
-  display:flex;align-items:center;gap:8px;
-}
- 
-.ui-dot{width:10px;height:10px;border-radius:50%;}
-.ui-dot.r{background:#f87171;} .ui-dot.y{background:#fbbf24;} .ui-dot.g{background:#34d399;}
-.ui-url{
-    margin-left:auto;font-size:11.5px;font-weight:700;color:var(--navy);opacity:0.6;
-    font-family:'Satoshi-Black',sans-serif;}
- 
-.ui-body{padding:1.5rem;}
- 
-.ui-task{
-  display:flex;align-items:center;gap:12px;
-  padding:12px 14px;border-radius:12px;
-  border:1.5px solid rgba(41,171,226,0.12);
-  margin-bottom:10px;background:var(--light-bg);
-  font-size:14px;font-weight:700;
-}
- 
-.ui-check{
-  width:22px;height:22px;border-radius:50%;
-  border:2.5px solid var(--accent);
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
-}
- 
-.ui-check.done{background:var(--accent);border-color:var(--accent);}
-.ui-check.done::after{content:'✓';color:white;font-size:11px;font-weight:900;}
- 
-.ui-subj{
-  font-size:11px;font-weight:800;padding:2px 9px;border-radius:999px;margin-left:auto;
-}
-.math{background:#e8f0fe;color:#3b5bdb;}
-.sci{background:#e8faf0;color:#1a7a4a;}
-.eng{background:#fff3e0;color:#c06000;}
- 
-.ui-due{font-size:11px;font-weight:800;color:var(--navy);}
  
 
 /* ── SOCIAL PROOF ── */

@@ -41,7 +41,7 @@ body{
 
     flex-direction: column;
     position: fixed;
-    width: 15vw; /* Set a specific width for the sidebar */
+    width: 6vw; /* Set a specific width for the sidebar */
     overflow-y: auto; /* Adds a scrollbar if content is too long */
 
 }
