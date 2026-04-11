@@ -63,17 +63,25 @@ stopBtn.addEventListener('click', function () {
 if (saveBtn) {
 
     saveBtn.addEventListener('click', function () {
+        let min_temp;
         if (timer){
             elapsed += Date.now() - startTime;
             timer = false;
         if (isRunning){
         // convert elapsed ms to minutes for the hours field
-            const hr = document.getElementById('hr').textContent;
-            const min = document.getElementById('min').textContent;
-            const sec = document.getElementById('sec').textContent;
+            let hr = document.getElementById('hr').textContent;
+            let min = document.getElementById('min').textContent;
+            let sec = document.getElementById('sec').textContent;
 
+            if (Number(min)>30){
+                hour_temp = 1;
+            }
+
+            if (hour_temp){
+                hour_temp+=Number(hour);
+            }
         // 3. Combine them into your display field
-            document.getElementById("session-hours").value = `${sec}`;
+            document.getElementById("session-hours").value = `${hour_temp}`;
         
             showSessionPopup(true);
             
