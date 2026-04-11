@@ -12,21 +12,21 @@
 
 .ocean {
     cursor: url("images/bcursor1.png"), pointer;
-    height: 50px;
+    height:50px;
     width:100%;
     position: fixed;
     bottom:0;
     left:0;
-    background-color: rgb(16, 60, 96);
+    background-color: var(--blue);
 }
 
 .wave {
     background: url("images/wave.png") repeat-x;
     position: absolute;
-    top: -250px;
-    width: 6400px;
-    height: 300px;
-    animation: wave 14s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, swell 7s;
+    top: -350px;
+    width: 3840px;
+    height: 700px;
+    animation: wave 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, swell 7s;
     transform: translate3d(0, 0, 0);
 }
 
@@ -51,7 +51,7 @@
         transform: translate3d(0,-20px,0);
     }
     50% {
-        transform: translate3d(0,20px,0);
+        transform: translate3d(0,40px,0);
     }
 }
 
@@ -74,8 +74,7 @@
     top: -350px;
     width: 6400px;
     height: 700px;
-    z-index: -10;
-    animation: home-wave 14s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, home-swell 7s;
+    animation: wave 14s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, swell 7s;
     transform: translate3d(0, 0, 0);
 }
 

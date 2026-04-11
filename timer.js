@@ -63,7 +63,7 @@ stopBtn.addEventListener('click', function () {
 if (saveBtn) {
 
     saveBtn.addEventListener('click', function () {
-        let min_temp;
+        let hour_temp;
         if (timer){
             elapsed += Date.now() - startTime;
             timer = false;
@@ -81,6 +81,9 @@ if (saveBtn) {
                 hour_temp+=Number(hour);
             }
         // 3. Combine them into your display field
+            if (hour_temp===undefined){
+                hour_temp=0;
+            }
             document.getElementById("session-hours").value = `${hour_temp}`;
         
             showSessionPopup(true);
