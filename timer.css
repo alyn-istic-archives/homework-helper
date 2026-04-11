@@ -70,8 +70,8 @@
 }
 
 @media(max-width:860px){
-  .timercontainer.show{
+  /* .timercontainer.show{
     left: 0%;
     top: 0%;
-  }
+  } */
 }
