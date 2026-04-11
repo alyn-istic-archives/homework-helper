@@ -73,7 +73,7 @@ if (saveBtn) {
             let min = document.getElementById('min').textContent;
             let sec = document.getElementById('sec').textContent;
 
-            if (Number(min)>30){
+            if (Number(min)>=30){
                 hour_temp = 1;
             }
 
