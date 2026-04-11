@@ -14,7 +14,6 @@
 <body>
 
 <body>
-    <img src="images/logo.png" width="350" height="171" id = "logo" class="logo">
 
     <div class = "home-ocean">
         <div class = "home-wave"></div>
@@ -23,26 +22,93 @@
 
     <!-- make a div for the top bar for navigation (have very little like maybe goal, detail, contact about us, etc.) -->
 
-    <container>
-
-        <div class = "header">
-
+    <!-- tuff ahh header (none of these hyperlinks... should??? work) -->
+    <nav>
+        <img src="images/logo.png" width="350" height="171" id = "logo" class="portal-logo" onclick="window.location.href='homepage.html';">
+        <ul class="nav-links">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Goals</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+        <div class="nav-btns">
+            <a href="homepage.html" class="btn btn-primary">Get started free →</a>
         </div>
+    </nav>
+    
+    <!-- HERO -->
+    <section class="blurb">
+    <div class="notif">
+        <span class="notif-wave">🌊</span>
+        New — Track homework and convert hours for personal goals!
+    </div>
+    
+    <h1>Ride the <span class="wave-word">wave</span> of getting things done.</h1>
+    
+    <p class="blurb-details">Wave: New Motion helps <strong>anyone</strong> stay on top of time management, projects, and personal goals — so nothing sinks underwater.</p>
+    
+    <div class="blurb-btns">
+        <a href="#" class="btn btn-primary">Start for free →</a>
+        <a href="#" class="btn btn-ghost">See how it works</a>
+    </div>
+    <p class="blurb-note">Free for students · No credit card needed · Beta testers only</p>
+    </section>
+    
 
-        <div class = "content">
-            <!-- <select id="dynamicDropdown">
-                <option disabled selected>Select an option</option>
-            </select>
-            <button id = "convert"> convert horus</button> -->
+    <!-- SOCIAL PROOF -->
+    <div class="proof">
+    <span class="proof-label">Features including: </span>
+    <div class="proof-features">
+        <span class="proof-feature">TIME LOGGING</span>
+        <span class="proof-feature">GOAL TRACKING</span>
+        <span class="proof-feature">COURSE ORGANIZATION</span>
+    </div>
+    </div>
 
-            <button onclick="window.location.href='homepage.html';">homepage</button>
+    
+    <!-- FEATURES -->
+    <section class="features">
+    <div class="section-header">
+        <h2>Everything you could need 🌊</h2>
+        <p class="section-sub">One place for all your projects — track all your assignments and time spent working !</p>
+    </div>
+    <div class="feat-grid">
+        <div class="feat-card">
+        <div class="feat-icon">📋</div>
+        <p class="feat-title">Smart assignment tracking</p>
+        <p class="feat-desc">Add in-real time spent on homework in accurate hour and minute intervals with a built-in stopwatch !</p>
         </div>
-        
-        <div class = "shop-output" id = "shop-output"> </div>
+        <div class="feat-card">
+        <div class="feat-icon">⏰</div>
+        <p class="feat-title">Deadline reminders</p>
+        <p class="feat-desc">Never miss a due date. Wave alerts you a day before anything is due — before it becomes a crisis.</p>
+        </div>
+        <!-- <div class="feat-card">
+        <div class="feat-icon">📊</div>
+        <p class="feat-title">Progress waves</p>
+        <p class="feat-desc">Visual progress bars and streak counters show how much you've accomplished each week.</p>
+        </div> -->
+        <div class="feat-card">
+        <div class="feat-icon">🎯</div>
+        <p class="feat-title">Goal setting</p>
+        <p class="feat-desc">Set personal goals or real-life items and buy them with your hours. Indulge yourself for working so hard — you earned it !</p>
+        </div>
+        <div class="feat-card">
+        <div class="feat-icon">🏷️</div>
+        <p class="feat-title">Subject organisation</p>
+        <p class="feat-desc">Filter by session course titles! Monitor time spent on specific courses, and go over fine details of what you've worked on.</p>
+        </div> 
+    </div>
+    </section>
 
-        <div class = "popup-overlay"></div>
-        
-    </container>
+    
+    <!-- CTA BANNER -->
+    <section class="promo">
+    <div class="promo-card">
+        <h2>Ready to catch your wave? 🌊</h2>
+        <p>Join thousands of students who never miss an assignment. Free to start, forever.</p>
+        <a href="#" class="btn btn-white btn-hero">Create your free account →</a>
+    </div>
+    </section>
     
     <script src="portal/portal.js"></script>
     

@@ -6,8 +6,28 @@
   font-display: swap; /* Helps with page load performance */
 }
 
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{
+from{
+    opacity:0;
+    transform:translateY(18px);
+}
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+}
+html{
+    scroll-behavior:smooth;
+}
+
+.body{
+    animation: fadeUp 0.5s ease forwards;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
 
 :root {
+ 
     --navy: #0a1c38;
     --blue: #1a6fc4;
     --accent: #2196f3;
@@ -15,18 +35,15 @@
     --light-bg: #f0f4f8;
 }
 
+
 .logo{
-    z-index: 40;
+    z-index: 30;
     position: fixed;
     left: 28%;
     top: -2.5%;
     margin: 0;
-    z-index: 30;
     line-height:0;
-    animation: fadeUp 0.5s ease forwards;
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 
 .logo.show{
     z-index: 40;
@@ -34,10 +51,7 @@
     left: 36%;
     top: -2.5%;
     margin: 0;
-    z-index: 30;
-    line-height:0;
-    animation: fadeUp 0.5s ease forwards;
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    line-height:0; 
 }
 .logo:hover{
     transform: scale(1.05);
@@ -45,20 +59,38 @@
 }
 
 body{
-    font-family:'Satoshi-Black', sans-serif;
+    font-family:'Satoshi-Black',sans-serif;
     font-size: 2vw;
     font-weight: bold;
     color: var(--light-bg);
 }
 h1 {
-    margin-top: 2px;
-    margin-bottom: 10px;
+    margin-top: .25em;
+    margin-bottom: .5em;
     color: var(--navy);
 }
 
 button{
-    cursor: url("images/bcursor1.png"), auto;
-    font-family: 'Satoshi-Black', sans-serif;
+    font-family:'Satoshi-Black',sans-serif;
+    cursor: url("images/bcursor1.png"), default;
+
+    display:inline-flex;
+    align-items:center;
+
+    padding:9px 20px;
+    border-radius:999px;
+    
+    background-color: var(--accent);
+    color: white;
+
+    font-size:1em;
+    font-weight:bold;
+    text-decoration:none;
+    border:none;
+    transition:all 0.2s;
+    margin-bottom: 20px;
+    /* cursor: url("images/bcursor1.png"), auto;
+    font-family:'Satoshi-Black',sans-serif;
     background-color: var(--accent);
     color: white;
     align-self: center;
@@ -71,7 +103,7 @@ button{
     font-size: 20px;
     border-radius: 10px;
     
-    font-weight: bold; 
+    font-weight: bold;  */
 }
 
 button:hover{
@@ -81,7 +113,7 @@ button:hover{
 
 }
 .delete-btn{
-    font-family: 'Satoshi-Black', sans-serif;
+    font-family:'Satoshi-Black',sans-serif;
     background-color: var(--accent);
     color: white;
     padding: 10px;
@@ -120,24 +152,30 @@ button:hover{
     width: auto;
     border-radius: 10px;
     color: var(--accent);
-    background-color: white;
     text-align: left;
+
+    background-color:white;
+    animation: fadeUp 0.5s ease forwards;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; 
 }
 
 .currency {
+    left: 10%;
     direction: flex;
     background-color: var(--accent);
     color: var(--light-bg);
     width: 10vw;
     border-radius: 15px;
     padding: 10px;
+
+    animation: fadeUp 0.5s ease forwards;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; 
 }
 .delete-popup {
     cursor: url("images/bcursor1.png"), pointer;
     display: flex;
     background-color: var(--light-bg);
     width: 30vw;
-    aspect-ratio: 5/4;
     flex-direction: column;
     box-sizing: border-box;
     overflow: auto;

@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="wave.css">
 </head>
 
-
+<body>
     <div class = "ocean">
         <div class = "wave"></div>
         <div class = "wave"></div>
     </div>
+    <div class = "header">
         <button class = "nav-btn" id = "nav-btn"> ☰ </button>
         <div class = "sidebar-total">
             <div class = "sidebar">
@@ -28,7 +29,10 @@
             </div>
             
         </div>
-        <img src="images/logo.png" width="350" height="171" class = "logo" id = "logo">
+        <div class = "currency"> hours:
+                <p class = "hours-logged" id = "hours-logged"> </p>  
+        </div> 
+        <img src="images/logo.png" width="350" height="171" class = "logo" id = "logo"onclick="window.location.href='index.html';">
         <div class = "timercontainer">  
                 <div class="time">
                     <span class="digit" id="hr">
@@ -55,11 +59,12 @@
                     <button class="tbtn" id="stop">
                         Stop
                     </button>
-                    <button class="tbtn" id="reset">
+                    <!-- <button class="tbtn" id="reset">
                         Reset
-                    </button>
+                    </button> -->
                 </div>
-        </div>     
+        </div>
+    </div>
     <container>
 
         <div class = "courses">
@@ -67,9 +72,6 @@
         </div>
         
         <div class = "content"> 
-            <div class = "currency"> hours:
-                <p class = "hours-logged" id = "hours-logged"> </p>  
-            </div> 
             <div class = "session-output"id = "session-output"></div>
         </div>
         

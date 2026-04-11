@@ -67,10 +67,13 @@ label{
     flex-direction: column;
     background-color: var(--light-bg);
     width: auto;
+
+    
     margin-top:1.5vw;
     margin-right: 20px;
     border-radius:20px;
     box-shadow: 0px 0px 15px rgba(26, 111, 196, 0.527);
+    animation:fadeUp 0.5s 0.12s ease both;
 }
 
 .session-popup {
@@ -79,20 +82,25 @@ label{
     background-color: var(--light-bg);
     width: 40vw;
     aspect-ratio: 5/4;
+
     flex-direction: column;
     box-sizing: border-box;
     overflow: auto;
+
     position: fixed;
     border-radius: 1rem;
     padding: 2rem;
     gap: 0rem;
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%) scale(0.8);
     opacity: 0;
     border: 0.15rem solid var(--light-bg);
     pointer-events: none;
+    
     z-index: 1000;
+    
 }
 
 .session-popup.show {

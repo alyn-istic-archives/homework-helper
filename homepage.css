@@ -20,8 +20,7 @@ html{
 }
 
 body{
-    
-    font-family:'Satoshi-Black', sans-serif;
+    font-family:'Satoshi-Black',sans-serif;
     font-size: 2vw;
     font-weight: bold;
     background-color: var(--light-bg);
@@ -30,29 +29,32 @@ body{
 }
 
 .container {
-    
     display: flex; /* Makes the children (aside and main) flex items */
     width: 20vw;
 }
 
 
 .sidebar-total {
-    cursor: url("images/bcursor1.png"), pointer;
-    margin: 0; 
+    margin-left: 0; 
     flex-direction: column;
     position: fixed;
-    width: 5vw; /* Set a specific width for the sidebar */
+
+    flex-direction: column;
+    position: fixed;
+    width: 15vw; /* Set a specific width for the sidebar */
     overflow-y: auto; /* Adds a scrollbar if content is too long */
+
 }
 
 .sidebar {
+    opacity:0;
     cursor: url("images/bcursor1.png"), auto;
     margin: 0;
-    opacity: 0;  
+    margin-left: 0;
 
     flex-direction: column;
     position: fixed;
-    width: 17.5vw; /* Set a specific width for the sidebar */
+    width: 15vw; /* Set a specific width for the sidebar */
     overflow-y: auto; /* Adds a scrollbar if content is too long */
 }
 
@@ -96,10 +98,7 @@ body{
 
 
 .sidebar.show {
-    width: 20vw;
-    transform: ease-in-out 3s;
     opacity: 1;
-    pointer-events: auto;
 }
 
 
@@ -139,13 +138,17 @@ body{
     cursor: url("images/bcursor1.png"), auto;
     z-index: 15;
     position: absolute;
-    right: 0%;
-    margin-left: 2.5vw;
+    right: 1%;
+    margin-left: 0vw;
     cursor: url("images/bcursor1.png"), pointer;
     align-self: right;
     gap: .5em;
     display: grid;
     grid-template-columns: repeat(1, minmax(20px, 150px));
+
+    
+    animation: fadeUp 0.5s ease forwards;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
 }
 
@@ -159,3 +162,33 @@ body{
     border-color: var(--blue);
     background-color: var(--accent);
 }
+.header{
+    position:sticky;
+    top:0;
+    z-index:100;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0;
+
+    margin-bottom: 0;
+    margin-left: 0;
+    height:150px;
+    color: blue;
+    /* light-bg */
+    /* background:rgba(240,244,248, 0.15); */
+    backdrop-filter:blur(5px);
+    border-bottom:1.5px solid rgba(41,171,226,0.15);
+}
+
+@media(max-width:860px){
+  .timercontainer.show{
+    left: 0%;
+    top: 0%;
+  }
+}
+/*  
+@media(max-width:500px){
+  .feat-grid{grid-template-columns:1fr;}
+} */

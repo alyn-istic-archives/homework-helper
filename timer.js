@@ -50,15 +50,15 @@ stopBtn.addEventListener('click', function () {
     }
 });
 
-resetBtn.addEventListener('click', function () {
-    timer = false;
-    isRunning = false;
-    elapsed = 0;
-    startTime = null;
-    document.getElementById('hr').innerHTML = "00";
-    document.getElementById('min').innerHTML = "00";
-    document.getElementById('sec').innerHTML = "00";
-});
+// resetBtn.addEventListener('click', function () {
+//     timer = false;
+//     isRunning = false;
+//     elapsed = 0;
+//     startTime = null;
+//     document.getElementById('hr').innerHTML = "00";
+//     document.getElementById('min').innerHTML = "00";
+//     document.getElementById('sec').innerHTML = "00";
+// });
 
 if (saveBtn) {
 

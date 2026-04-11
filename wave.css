@@ -1,9 +1,18 @@
 /* Animated Wave Background Style  */
 
+:root {
+ 
+    --navy: #0a1c38;
+    --blue: #1a6fc4;
+    --accent: #2196f3;
+    --white: #ffffff;
+    --light-bg: #f0f4f8;
+}
+
 
 .ocean {
     cursor: url("images/bcursor1.png"), pointer;
-    height: 30px;
+    height: 50px;
     width:100%;
     position: fixed;
     bottom:0;
@@ -26,6 +35,7 @@
     animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 5s ease -1.25s infinite;
     opacity: 1;
 }
+
 
 @keyframes wave {
     0% {
@@ -50,12 +60,12 @@
 
 .home-ocean {
     cursor: url("images/bcursor1.png"), pointer;
-    height: 30px;
+    height: 50px;
     width:100%;
     position: fixed;
     bottom:0;
     left:0;
-    background-color: rgb(16, 60, 96);
+    background-color: var(--blue);
 }
 
 .home-wave {
@@ -64,15 +74,18 @@
     top: -350px;
     width: 6400px;
     height: 350px;
+    z-index: -10;
     animation: home-wave 14s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite, home-swell 7s;
     transform: translate3d(0, 0, 0);
 }
 
 .home-wave:nth-of-type(2) {
     top: -350px;
+    z-index: -10;
     animation: home-wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, home-swell 7.5s ease -1.25s infinite;
     opacity: 1;
 }
+
 
 @keyframes home-wave {
     0% {
@@ -85,9 +98,9 @@
 
 @keyframes home-swell {
     0%, 100% {
-        transform: translate3d(0,-30px,0);
+        transform: translate3d(0,-20px,0);
     }
     50% {
-        transform: translate3d(0,30px,0);
+        transform: translate3d(0,20px,0);
     }
 }
