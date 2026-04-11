@@ -135,7 +135,7 @@ nav{
   position:absolute;top:-120px;left:50%;transform:translateX(-50%);
   width:900px;height:700px;
   background:radial-gradient(ellipse, rgba(41,171,226,0.13) 0%, transparent 65%);
-  pointer-events:none;
+
 }
  
 .notif{
@@ -392,7 +392,7 @@ h2{
  
 .promo-card::before, .promo-card::after{
     content:'';position:absolute;border-radius:50%;
-    background:rgba(255,255,255,0.07);pointer-events:none;
+    background:rgba(255,255,255,0.07);
 }
 .promo-card::before{
     width:400px;

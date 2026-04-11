@@ -3,12 +3,17 @@
     cursor: url("images/bcursor1.png"), pointer;
     position: fixed;
     left: 60%;
-    top: 2.5%;
+    top: 5%;
     z-index: 30;
-    display: block;
-    height: 10vh;
+
+    align-items: center;
     
+    display: flex;
+    flex-direction: column;
+
+    height: 10vh;
     line-height:0;
+    width: auto;
     border-radius: 20px;
     margin-bottom: 10vh;
 }
@@ -62,4 +67,11 @@
     padding-right: 10px; */
     border-radius: 20px;
     margin: 0;
+}
+
+@media(max-width:860px){
+  .timercontainer.show{
+    left: 0%;
+    top: 0%;
+  }
 }

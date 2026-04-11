@@ -39,7 +39,7 @@ html{
 .logo{
     z-index: 30;
     position: fixed;
-    left: 28%;
+    left: 25%;
     top: -2.5%;
     margin: 0;
     line-height:0;
@@ -48,7 +48,7 @@ html{
 .logo.show{
     z-index: 40;
     position: fixed;
-    left: 36%;
+    left: 33%;
     top: -2.5%;
     margin: 0;
     line-height:0; 
