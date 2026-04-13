@@ -17,6 +17,8 @@ const delete_form = document.getElementById("delete-form");
 let items = JSON.parse(localStorage.getItem("items")) || [];
 let items_bought = JSON.parse(localStorage.getItem("items_bought")) || [];
 
+const renewable = document.querySelector('input[name="item-type"]:checked').value === "renewable";
+
 
 if (n_goal){
     n_goal.addEventListener("click", function() {
@@ -78,9 +80,10 @@ function uploadItem() {
     const item_name = document.getElementById("item-name").value.trim();
     const item_value = document.getElementById("item-value").value.trim();
     const details = document.getElementById("item-details").value.trim();
+    const renewable = document.querySelector('input[name="item-type"]:checked').value === "renewable";
     const id = Date.now();
 
-    const entry = {item_name, item_value, details, id};
+    const entry = {item_name, item_value, details,renewable, id};
 
     items.push(entry);
     localStorage.setItem("items", JSON.stringify(items));
@@ -100,17 +103,16 @@ function displayItems(items) {
             const item = document.createElement("div");
             item.classList.add("item-card");
 
-            const name = document.createElement("h1");
-            name.classList.add("sh1");
-            name.textContent = data.item_name;
-
-            const value = document.createElement("p");
-            value.classList.add("sp");
+            const value = document.createElement("h2");
             value.textContent = data.item_value;
 
             const details = document.createElement("p");
             details.classList.add("sp");
             details.textContent = data.details;
+
+            const renew = document.createElement("h1");
+            renew.classList.add("sh1");
+            renew.textContent = data.item_name + (data.renewable ? " (Renewable)" : "");
 
             const buy = document.createElement("button");
             buy.textContent = "buy";
@@ -120,9 +122,11 @@ function displayItems(items) {
             deleteitem.textContent = "delete";
             deleteitem.classList.add("buy-btn");
 
-            item.appendChild(name);
+            
+            item.appendChild(renew);
             item.appendChild(value);   
             item.appendChild(details);
+            
             item.appendChild(buy);
             item.appendChild(deleteitem);
 
@@ -169,9 +173,10 @@ function buyItem(id) {
             localStorage.setItem("items_bought", JSON.stringify(items_bought));
         }
 
-
-        items = items.filter(session => session.id !== id);
-        localStorage.setItem("items", JSON.stringify(items));
+        if (!item.renewable){
+            items = items.filter(session => session.id !== id);
+            localStorage.setItem("items", JSON.stringify(items));
+        }
 
         displayItems(items);
         calculatehours();

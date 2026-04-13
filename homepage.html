@@ -32,7 +32,7 @@
         <div class = "currency"> hours:
                 <p class = "hours-logged" id = "hours-logged"> </p>  
         </div> 
-        <img src="images/logo.png" width="350" height="171" class = "logo" id = "logo"onclick="window.location.href='index.html';">
+        <img src="images/logo.png" class = "logo" id = "logo"onclick="window.location.href='index.html';">
         <div class = "timercontainer">  
                 <div class="time">
                     <span class="digit" id="hr">
@@ -57,7 +57,7 @@
                         Save
                     </button>
                     <button class="tbtn" id="stop">
-                        Stop
+                        Pause
                     </button>
                     <!-- <button class="tbtn" id="reset">
                         Reset
@@ -67,10 +67,17 @@
     </div>
     <container>
 
-        <div class = "courses">
+        <!-- <div class = "courses">
             <div id = "coursebtns" class = "course-set"></div> 
         </div>
-        
+         -->
+
+         <div class="courses">
+            <select id="coursebtns" class="course-select">
+                <option value="all">All Courses</option>
+                <option value="urhgh"> idk </option>
+            </select>
+        </div>
         <div class = "content"> 
             <div class = "session-output"id = "session-output"></div>
         </div>
@@ -80,8 +87,10 @@
             <h3 class = "sh1"> New Assignment </h3>
             <label> Course*</label>
             <input type="text" id="session-name" class = "session-coursebox" placeholder="Course">
-            <label> Hours:*</label>
+            <label> Hours (Redeemable):*</label>
             <input type="text" id="session-hours" class = "session-numbox" value="Example" readonly>
+            <label> Time spent on Project:</label>
+            <input type="text" id="session-time" class = "session-numbox" value="notwork" readonly>
             <label> Details:</label> <textarea id="session-details" class = "session-textbox" placeholder="Optional notes on assignment"></textarea>
 
             <button type="submit" id="submit-session"> submit </button>

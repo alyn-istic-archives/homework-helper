@@ -18,11 +18,11 @@ let isRunning = false;
 
 function stopWatch() {
     if (!timer) return;
-    isRunning = true;
+    
     const now = Date.now();
     const total = elapsed + (now - startTime); // total ms
 
-    const totalSeconds = Math.floor(total / 1000);
+    const totalSeconds = Math.floor(total / 1);
     const hour = Math.floor(totalSeconds / 3600);
     const minute = Math.floor((totalSeconds % 3600) / 60);
     const second = totalSeconds % 60;
@@ -33,22 +33,26 @@ function stopWatch() {
 
     setTimeout(stopWatch, 100);
 }
-
-startBtn.addEventListener('click', function () {
+if (startBtn){
+    startBtn.addEventListener('click', function () {
     if (!timer) {
         timer = true;
+        isRunning = true;
         startTime = Date.now(); // record when we started
         stopWatch();
     }
-});
+    });
+}
 
-stopBtn.addEventListener('click', function () {
-    if (timer) {
-        isRunning =true;
-        elapsed += Date.now() - startTime; // save accumulated time
-        timer = false;
-    }
-});
+if (stopBtn){
+    stopBtn.addEventListener('click', function () {
+        if (timer) {
+            isRunning =true;
+            elapsed += Date.now() - startTime; // save accumulated time
+            timer = false;
+        }
+    });
+}
 
 // resetBtn.addEventListener('click', function () {
 //     timer = false;
@@ -63,28 +67,27 @@ stopBtn.addEventListener('click', function () {
 if (saveBtn) {
 
     saveBtn.addEventListener('click', function () {
-        let hour_temp;
+        let hour_temp = document.getElementById('hr');
+        let real_hour = document.getElementById('hr').textContent;
         if (timer){
             elapsed += Date.now() - startTime;
             timer = false;
+        }
         if (isRunning){
-        // convert elapsed ms to minutes for the hours field
-            let hr = document.getElementById('hr').textContent;
             let min = document.getElementById('min').textContent;
+            if (Number(min)>=30){
+                hour_temp.textContent = Number(hour_temp.textContent)+1;
+            }
+        // convert elapsed ms to minutes for the hours field
+            let hr = hour_temp.textContent;
             let sec = document.getElementById('sec').textContent;
 
-            if (Number(min)>=30){
-                hour_temp = 1;
-            }
 
-            if (hour_temp){
-                hour_temp+=Number(hour);
-            }
+            hr
         // 3. Combine them into your display field
-            if (hour_temp===undefined){
-                hour_temp=0;
-            }
-            document.getElementById("session-hours").value = `${hour_temp}`;
+
+            document.getElementById("session-hours").value = `${(hr)}`;
+            document.getElementById("session-time").value = `Time Spent (non-redeemable): ${real_hour} : ${min} : ${sec}`;
         
             showSessionPopup(true);
             
@@ -95,7 +98,7 @@ if (saveBtn) {
             document.getElementById('sec').innerHTML = "00";
             }
         }
-    });
+        );
 
     isRunning = false;
 }

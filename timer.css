@@ -1,21 +1,44 @@
 
-.timercontainer.show{
-    cursor: url("images/bcursor1.png"), pointer;
-    position: fixed;
+.timercontainer.show {
     left: 60%;
-    top: 5%;
-    z-index: 30;
+    transform: translateX(-50%);
+}
 
-    align-items: center;
-    
-    display: flex;
-    flex-direction: column;
-
-    height: 10vh;
-    line-height:0;
+.time {
+    font-size: 1.6em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 0.4em 1em;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    background: var(--blue);
+    box-shadow: 0 4px 14px rgba(33, 150, 243, 0.4);
+    border: none;
     width: auto;
-    border-radius: 20px;
-    margin-bottom: 10vh;
+}
+
+.time-btns {
+    display: flex;
+    gap: 6px;
+}
+
+.tbtn {
+    padding: 6px 14px;
+    font-size: 0.6em;
+    border-radius: 999px;
+    margin: 0;
+    background: var(--accent);
+    border: 1.5px solid rgba(255,255,255,0.35);
+    color: white;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s, transform 0.15s;
+}
+
+.tbtn:hover {
+    background: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
 }
 
 .timercontainer{
@@ -29,12 +52,13 @@
     display: flex;
     flex-direction: column;
 
-    height: 10vh;
+    height: auto;
     line-height:0;
     width: auto;
     
     border-radius: 20px;
-    margin-bottom: 10vh;
+    backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
 
     animation: fadeUp 0.5s ease forwards;
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;;
@@ -60,18 +84,3 @@
     display: block;
 }
 
-.tbtn{
-    /* padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px; */
-    border-radius: 20px;
-    margin: 0;
-}
-
-@media(max-width:860px){
-  /* .timercontainer.show{
-    left: 0%;
-    top: 0%;
-  } */
-}

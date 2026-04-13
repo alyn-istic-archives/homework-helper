@@ -105,10 +105,11 @@ function uploadSession() {
 
     const course = document.getElementById("session-name").value.trim();
     const hours = document.getElementById("session-hours").value.trim();
+    const time = document.getElementById("session-time").value.trim();
     const details = document.getElementById("session-details").value.trim();
     const id = Date.now();
 
-    const entry = {course, hours, details, id};
+    const entry = {course, hours, time, details, id};
 
     sessions.push(entry);
 
@@ -140,6 +141,10 @@ function displayEntries(entries) {
             hours.classList.add("sp");
             hours.textContent = data.hours;
 
+            const time_spent = document.createElement("p");
+            time_spent.classList.add("sp");
+            time_spent.textContent = data.time;
+
             const details = document.createElement("p");
             details.classList.add("sp");
             details.textContent = data.details;
@@ -150,6 +155,7 @@ function displayEntries(entries) {
 
             entry.appendChild(course);
             entry.appendChild(hours);   
+            entry.appendChild(time_spent);
             entry.appendChild(details);
             entry.appendChild(deletebtn);
 

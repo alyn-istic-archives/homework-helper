@@ -16,6 +16,10 @@
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.shop-logo.show{
+    left: 46%;
+}
+
 .shop-logo:hover{
     transform: scale(1.05);
     cursor: url("images/bcursor1.png"), default;

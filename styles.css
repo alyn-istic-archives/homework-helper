@@ -27,7 +27,7 @@ html{
 }
 
 :root {
- 
+    --primary: "Satoshi-Black", sans-serif;
     --navy: #0a1c38;
     --blue: #1a6fc4;
     --accent: #2196f3;
@@ -37,6 +37,8 @@ html{
 
 
 .logo{
+    width: 350px;
+    height: 171px;
     z-index: 30;
     position: fixed;
     left: 25%;
@@ -59,7 +61,7 @@ html{
 }
 
 body{
-    font-family:'Satoshi-Black',sans-serif;
+    font-family:var(--primary);
     font-size: 2vw;
     font-weight: bold;
     color: var(--light-bg);
@@ -68,6 +70,11 @@ h1 {
     margin-top: .25em;
     margin-bottom: .5em;
     color: var(--navy);
+}
+h2 {
+    font-size: 1em;
+    color: var(--blue);
+    line-height: 10px;
 }
 
 button{
@@ -220,4 +227,17 @@ button:hover{
 .delete-popup-overlay.show {
     opacity: 1;
     pointer-events: auto;
+}
+
+@media (max-width: 1000px) {
+    logo{
+        left: 10%;
+        width: 175px;
+        height: 85.5px;
+    }
+    logo.show{
+        left: 28%;
+        width: 175px;
+        height: 85.5px;
+    }
 }
