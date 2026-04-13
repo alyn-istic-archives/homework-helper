@@ -194,17 +194,23 @@ body{
 
     display:flex;
     align-items:center;
-    justify-content:space-between;
     padding:0;
 
     margin-bottom: 0;
     margin-left: 0;
+
     height:150px;
-    color: blue;
     /* light-bg */
-    /* background:rgba(240,244,248, 0.15); */
+    background:rgba(240,244,248, 0.15);
     backdrop-filter:blur(5px);
     border-bottom:1.5px solid rgba(41,171,226,0.15);
+}
+
+.header-content{
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .course-select {

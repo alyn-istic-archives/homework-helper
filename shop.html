@@ -16,12 +16,14 @@
 <body>
 
 <body>
-    <img src="images/logo.png" width="350" height="171" id = "logo" class="shop-logo">
+    
 
     <div class = "ocean">
         <div class = "wave"></div>
         <div class = "wave"></div>
     </div>
+    <div class = "header">
+        <img src="images/logo.png" width="350" height="171" id = "logo" class="shop-logo" onclick="window.location.href='homepage.html';">
         <div class = "sidebar-total">
             <button class = "nav-btn" id = "nav-btn"> ☰ </button>
             <div class = "sidebar">
@@ -31,8 +33,17 @@
                 <a href = "homepage.html"> Hours </a>
                 <a class = "active"> shop </a>
                 <a href = "guy.html"> lil guy </a>  
+            
             </div>
         </div>
+        <div class = "header-content">
+            <button id = "new-item"> new goal !!</button> 
+            <button id = "clear-bought" class = "bought-btn"> bought </button>
+            <div class = "currency"> hours:
+                <p class = "hours-logged" id = "hours-logged"> </p>  
+            </div>
+        </div>
+    </div>
 
     <container>
 
@@ -41,11 +52,6 @@
                 <option disabled selected>Select an option</option>
             </select>
             <button id = "convert"> convert horus</button> -->
-            <button id = "new-item"> new goal !!</button> 
-            <button id = "clear-bought"> bought </button>
-            <div class = "currency"> hours:
-                <p class = "hours-logged" id = "hours-logged"> </p>  
-            </div>
             <div class = "shop-output" id = "shop-output"> items.. </div>
         </div>
         
