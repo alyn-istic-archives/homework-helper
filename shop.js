@@ -9,6 +9,7 @@ const shop_output = document.getElementById("shop-output");
 const shop_form = document.getElementById("item-form");
 const clear = document.getElementById("clear-bought");
 const show_bought = document.getElementById("show-bought");
+const show_shop = document.getElementById("show-shop");
 
 const cantbuy = document.getElementById("cantbuy-form");
 const c_cantbuy = document.getElementById("close-cantbuy");
@@ -47,6 +48,12 @@ if (clear){
 if (show_bought){
     show_bought.addEventListener("click", function(){
         displayBought();
+    })
+}
+
+if (show_shop){
+    show_shop.addEventListener("click", function(){
+        displayShop();
     })
 }
 
@@ -90,7 +97,7 @@ function uploadItem() {
     const renewable = document.querySelector('input[name="item-type"]:checked').value === "renewable";
     const id = Date.now();
 
-    const entry = {item_name, item_value, details,renewable, id};
+    const entry = {item_name, item_value, details, renewable, id};
 
     items.push(entry);
     localStorage.setItem("items", JSON.stringify(items));
@@ -171,6 +178,14 @@ function displayBought(){
 
     calculatehours();
     displayItems(items_bought);
+
+}
+
+function displayShop(){
+    let items = JSON.parse(localStorage.getItem("items")) || [];
+
+    calculatehours();
+    displayItems(items);
 
 }
 
