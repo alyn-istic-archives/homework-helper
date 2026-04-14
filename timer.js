@@ -22,7 +22,7 @@ function stopWatch() {
     const now = Date.now();
     const total = elapsed + (now - startTime); // total ms
 
-    const totalSeconds = Math.floor(total / 1);
+    const totalSeconds = Math.floor(total / 1000);
     const hour = Math.floor(totalSeconds / 3600);
     const minute = Math.floor((totalSeconds % 3600) / 60);
     const second = totalSeconds % 60;
