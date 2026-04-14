@@ -137,12 +137,10 @@ function displayEntries(entries) {
             course.classList.add("sh1");
             course.textContent = data.course;
 
-            const hours = document.createElement("p");
-            hours.classList.add("sp");
+            const hours = document.createElement("h2");
             hours.textContent = data.hours;
 
-            const time_spent = document.createElement("p");
-            time_spent.classList.add("sp");
+            const time_spent = document.createElement("h2");
             time_spent.textContent = data.time;
 
             const details = document.createElement("p");

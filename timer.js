@@ -87,7 +87,7 @@ if (saveBtn) {
         // 3. Combine them into your display field
 
             document.getElementById("session-hours").value = `${(hr)}`;
-            document.getElementById("session-time").value = `Time Spent (non-redeemable): ${real_hour} : ${min} : ${sec}`;
+            document.getElementById("session-time").value = `Time Spent: ${real_hour} : ${min} : ${sec}`;
         
             showSessionPopup(true);
             

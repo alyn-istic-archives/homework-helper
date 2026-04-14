@@ -8,6 +8,7 @@ const shop_output = document.getElementById("shop-output");
 
 const shop_form = document.getElementById("item-form");
 const clear = document.getElementById("clear-bought");
+const show_bought = document.getElementById("show-bought");
 
 const cantbuy = document.getElementById("cantbuy-form");
 const c_cantbuy = document.getElementById("close-cantbuy");
@@ -41,6 +42,12 @@ if (clear){
     clear.addEventListener("click", function() {
         clearBought();
     });
+}
+
+if (show_bought){
+    show_bought.addEventListener("click", function(){
+        displayBought();
+    })
 }
 
 if (c_cantbuy){
@@ -157,6 +164,14 @@ function clearBought(){
     items_bought = [];
     localStorage.setItem("items_bought", JSON.stringify(items_bought));
     calculatehours();
+}
+
+function displayBought(){
+    let items_bought = JSON.parse(localStorage.getItem("items_bought")) || [];
+
+    calculatehours();
+    displayItems(items_bought);
+
 }
 
 

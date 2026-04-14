@@ -74,7 +74,7 @@ h1 {
 h2 {
     font-size: 1em;
     color: var(--blue);
-    line-height: 10px;
+    line-height: 1em;
 }
 
 button{
