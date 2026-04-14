@@ -9,7 +9,7 @@
 .shop-logo{
     z-index: 40;
     position: fixed;
-    left: 40%;
+    left: 35%;
     top: 0%;
     margin: 0;
     line-height:0;
@@ -17,7 +17,7 @@
 }
 
 .shop-logo.show{
-    left: 48%;
+    left: 40%;
 }
 
 .shop-logo:hover{
