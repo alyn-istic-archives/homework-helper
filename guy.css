@@ -1,7 +1,16 @@
-img{
-    opacity: 0;
+body {
+        background-size: cover; /* Make image cover the whole screen */
+        background-repeat: no-repeat;
+        background-position: center;
 }
 
-img.show{
-    opacity: 1;
+.tank {
+    background-size: cover;
+    background-position: center;
+}
+.evolve-btn{
+    right: 0%;
+}
+.img-invis{
+    opacity: 0;
 }
