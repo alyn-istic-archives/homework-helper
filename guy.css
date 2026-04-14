@@ -1,4 +1,6 @@
 body {
+        width: 1920px;
+        height: 1080px;
         background-size: cover; /* Make image cover the whole screen */
         background-repeat: no-repeat;
         background-position: center;
