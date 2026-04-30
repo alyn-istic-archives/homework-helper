@@ -11,7 +11,7 @@
 
 ---
 
-## 𖦹 How to Use 𖦹
+## 𖦹 The Timer - How to Use 𖦹
 
 1. Set the stopwatch for an unlimited time session
 2. After a couple hours using the stopwatch, press save and a popup appears
@@ -21,7 +21,7 @@
 ---
 
 
-## 🛍️ The Shop — How It Works
+## The Shop - How It Works
 The shop is a personal reward system!!
 1. You set your own items or goals. (e.g. You want to reward yourself with a scroll break after an hour of studying)
 (The shop doesn't come pre-filled with any items. Everything in it is created by you using the New Goal/Item button. Like a wishlist, based of personal motivation!)
@@ -42,5 +42,11 @@ If you try to buy something you can't afford yet, the app will let you know. Kee
 ## Clear Bought
 The Clear Bought button wipes your purchase history so you can start fresh.
 
-﹏𓊝﹏𓂁﹏⊹ ࣪ Credits 🫧
+---
+
+## ﹏𓊝﹏𓂁﹏⊹ ࣪ Credits 🫧
 All art made by me!!
+
+(clicking the logo on the homepage or any of the get started buttons brings you to the website with all the aforementioned functions!)
+
+demo link: https://wave-new-motion.vercel.app/index.html 
