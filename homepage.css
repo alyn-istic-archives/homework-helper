@@ -1,11 +1,10 @@
 @font-face {
   font-family: 'Satoshi'; /* Name the font */
-  src: url("Satoshi-Black.ttf") format("truetype"); 
+  src: url("satoshi/Satoshi-Black.otf") format("opentype"); 
   font-weight: 100 900;
   font-style: normal;
   font-display: swap; /* Helps with page load performance */
 }
-
 html{
     cursor: url("images/bcursor1.png"), pointer;
 }
@@ -17,6 +16,7 @@ html{
     --accent: rgb(33, 150, 243);
     --white: #ffffff;
     --light-bg: #f0f4f8;
+    --font: 'Satoshi', sans-serif;
 }
 
 body{
@@ -138,15 +138,6 @@ body{
     height: 100%;
     margin-left:16vw;
 }
-
-/*.sidebar button{
-    display: block;
-    padding: 10px 0;
-    text-decoration: none;
-    color: black;
-    background: none;
-    border: none;
-}*/
 
 
 .nav-btn{
